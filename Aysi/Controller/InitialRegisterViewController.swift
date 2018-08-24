@@ -123,69 +123,71 @@ class InitialRegisterViewController: UIViewController {
     
     
     // MARK: - SIgn Up Page
-    @IBAction func selanjutnyaButtonPressed() {
-        guard let nama = nameSignUpField, nama != "" else {
-            let alertController = UIAlertController(title: "Eror", message: "Masukkan nama Anda", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
+    @IBAction func buatButtonPressed() {
         
-        guard let email = emailSignUpField, email != "" else {
-            let alertController = UIAlertController(title: "Eror", message: "Masukkan email Anda", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
         
-        guard let password = passwordSignUpField, password != "" else {
-            let alertController = UIAlertController(title: "Eror", message: "Masukkan password Anda", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
-        
-        guard let confirmPassword = confirmPasswordField, confirmPassword != "" else {
-            let alertController = UIAlertController(title: "Eror", message: "Konfirmasi password Anda", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
+//        guard let nama = nameSignUpField.text, nama != "" else {
+//            let alertController = UIAlertController(title: "Eror", message: "Masukkan nama Anda", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alertController.addAction(defaultAction)
+//            present(alertController, animated: true, completion: nil)
+//            return
+//        }
+//
+//        guard let email = emailSignUpField.text, email != "" else {
+//            let alertController = UIAlertController(title: "Eror", message: "Masukkan email Anda", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alertController.addAction(defaultAction)
+//            present(alertController, animated: true, completion: nil)
+//            return
+//        }
+//
+//        guard let password = passwordSignUpField.text, password != "" else {
+//            let alertController = UIAlertController(title: "Eror", message: "Masukkan password Anda", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alertController.addAction(defaultAction)
+//            present(alertController, animated: true, completion: nil)
+//            return
+//        }
+//
+//        guard let confirmPassword = confirmPasswordField.text, confirmPassword != "" else {
+//            let alertController = UIAlertController(title: "Eror", message: "Konfirmasi password Anda", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alertController.addAction(defaultAction)
+//            present(alertController, animated: true, completion: nil)
+//            return
+//        }
         
 //        if password != confirmPassword
         
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if error == nil {
-                // Instantiate Home VC
-                let storyboard = UIStoryboard(name: "Home", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "homeVC")
-                self.present(controller, animated: true, completion: nil)
-            } else {
-
-                let errorCode = error! as NSError
-                var errorMessage = String()
-
-                switch errorCode.code{
-                    case AuthErrorCode.invalidEmail.rawValue:
-                        errorMessage = "Format email tidak tepat"
-                    case AuthErrorCode.emailAlreadyInUse.rawValue:
-                        errorMessage = "Email sudah digunakan"
-                    case AuthErrorCode.weakPassword.rawValue:
-                        errorMessage = "Kata sandi harus lebih dari 6 karakter"
-                    default:
-                        errorMessage = error.debugDescription
-                }
-
-                let alertController = UIAlertController(title: "Eror", message: errorMessage, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
-            }
-        }
+//        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+//            if error == nil {
+//                // Instantiate Home VC
+//                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//                let controller = storyboard.instantiateViewController(withIdentifier: "homeVC")
+//                self.present(controller, animated: true, completion: nil)
+//            } else {
+//
+//                let errorCode = error! as NSError
+//                var errorMessage = String()
+//
+//                switch errorCode.code{
+//                    case AuthErrorCode.invalidEmail.rawValue:
+//                        errorMessage = "Format email tidak tepat"
+//                    case AuthErrorCode.emailAlreadyInUse.rawValue:
+//                        errorMessage = "Email sudah digunakan"
+//                    case AuthErrorCode.weakPassword.rawValue:
+//                        errorMessage = "Kata sandi harus lebih dari 6 karakter"
+//                    default:
+//                        errorMessage = error.debugDescription
+//                }
+//
+//                let alertController = UIAlertController(title: "Eror", message: errorMessage, preferredStyle: .alert)
+//                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//                alertController.addAction(defaultAction)
+//                self.present(alertController, animated: true, completion: nil)
+//            }
+//        }
     }
     
     @IBAction func masukSignUpButtonPressed() {
