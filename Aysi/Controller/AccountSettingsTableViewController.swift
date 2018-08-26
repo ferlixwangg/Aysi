@@ -45,7 +45,11 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 3 && Auth.auth().currentUser != nil{
             print("LOGOUT")
-//            try! Auth.auth().signOut()
+            
+            let vc = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
+            present(vc, animated: true, completion: nil)
+            
+            try! Auth.auth().signOut()
         }
     }
 
@@ -82,12 +86,22 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             saveBtnOutlet.isEnabled = true
             
             let userID = Auth.auth().currentUser?.uid
-//            self.ref.child("child").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
-//                let value = snapshot.value as? [String: Any]
-//                let childName = value?["childName"] as? String ?? ""
-//                let dob = value?["dob"] as? String ?? ""
-//                let gender = value?["gender"] as? String ?? ""
-//            }
+            self.ref.child("child").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+                 let data = snapshot.value as? [String: Any]
+                
+                guard let childName = data?["childName"] as? String,
+                    let gender = data?["gender"] as? String,
+                    let dob = data?["dob"] as? String,
+                    childName != "",
+                    gender != "",
+                    dob != ""
+                    else{
+                        print("Data is empty")
+                        return
+                }
+                
+                print("success")
+            }
         }
         
         if UserDefaults.standard.object(forKey: "contentNotif") != nil {

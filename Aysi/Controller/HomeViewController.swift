@@ -56,7 +56,6 @@ class HomeViewController: UIViewController {
     }
     
     func createNavBarButtons() {
-        
         // Setting button
         let settingButton = UIButton(type: .custom)
         settingButton.setImage(UIImage(named: "Settings icon"), for: .normal)
@@ -93,6 +92,4 @@ class HomeViewController: UIViewController {
     @objc func settingButtonPressed() {
         performSegue(withIdentifier: "homeToAccountSetting", sender: self)
     }
-    
-    
 }
