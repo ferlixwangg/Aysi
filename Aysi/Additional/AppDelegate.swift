@@ -20,24 +20,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-//        if Auth.auth().currentUser == nil {
-//            print("Ga masuk")
-//        }
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let storyboard = UIStoryboard(name: "InitialRegister", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginVC")
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-        
+        var initialViewController: UIViewController!
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
                 NSAttributedStringKey.font : UIFont(name: "Avenir Next", size: 17)!,
                 NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.08039890975, green: 0.3413983583, blue: 0.4325652719, alpha: 1),
                 ], for: .normal)
         
+        if Auth.auth().currentUser != nil {
+            let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
+            initialViewController = UINavigationController(rootViewController: vc)
+            
+        } else {
+            initialViewController = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
+        }
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

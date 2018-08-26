@@ -69,6 +69,8 @@ class InitialRegisterViewController: UIViewController {
     func moveToHomePage() {
         let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
         let navigationController = UINavigationController(rootViewController: vc)
+        self.definesPresentationContext = true
+        vc.modalPresentationStyle = .overCurrentContext
         present(navigationController, animated: true, completion: nil)
     }
     
