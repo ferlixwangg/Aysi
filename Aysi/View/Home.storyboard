@@ -18,10 +18,10 @@
             </objects>
             <point key="canvasLocation" x="2617" y="126"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Fqi-Vg-J6k">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="i7j-Lc-vWo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="i7j-Lc-vWo" customClass="HomeViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xs-Bh-Ygw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

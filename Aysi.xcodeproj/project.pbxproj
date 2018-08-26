@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89EDAC262130009D0015133A /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDAC252130009D0015133A /* AccountSettingsViewController.swift */; };
+		89EDAC2821300A7E0015133A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDAC2721300A7E0015133A /* HomeViewController.swift */; };
 		9708BDB3DA2AD867CE3FEBD5 /* Pods_Aysi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */; };
 		BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */; };
 		BA83B1AE212AA56A007B573B /* InitialRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA83B1AD212AA56A007B573B /* InitialRegister.storyboard */; };
@@ -28,6 +30,8 @@
 		062280EA38180DFDD7214973 /* Pods-Aysi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aysi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aysi/Pods-Aysi.release.xcconfig"; sourceTree = "<group>"; };
 		0B812A14B6A795B18C4300ED /* Pods-Aysi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aysi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aysi/Pods-Aysi.debug.xcconfig"; sourceTree = "<group>"; };
 		37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aysi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89EDAC252130009D0015133A /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		89EDAC2721300A7E0015133A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA83B1AD212AA56A007B573B /* InitialRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialRegister.storyboard; sourceTree = "<group>"; };
 		BA83B1AF212AA5BD007B573B /* InitialRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRegisterViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				BA83B1AF212AA5BD007B573B /* InitialRegisterViewController.swift */,
 				BAD55100212FCF4B001ECE11 /* DataBayiViewController.swift */,
+				89EDAC252130009D0015133A /* AccountSettingsViewController.swift */,
+				89EDAC2721300A7E0015133A /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,8 +280,10 @@
 			files = (
 				BA83B1B0212AA5BD007B573B /* InitialRegisterViewController.swift in Sources */,
 				BAD55101212FCF4B001ECE11 /* DataBayiViewController.swift in Sources */,
+				89EDAC262130009D0015133A /* AccountSettingsViewController.swift in Sources */,
 				BAA4B0322122C5E4001BE550 /* AppDelegate.swift in Sources */,
 				BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */,
+				89EDAC2821300A7E0015133A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,6 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [
+                NSAttributedStringKey.font : UIFont(name: "Avenir Next", size: 17)!,
+                NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.08039890975, green: 0.3413983583, blue: 0.4325652719, alpha: 1),
+                ], for: .normal)
+        
         return true
     }
 
