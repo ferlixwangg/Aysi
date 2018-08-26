@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		89EDAC262130009D0015133A /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDAC252130009D0015133A /* AccountSettingsViewController.swift */; };
-		89EDAC2821300A7E0015133A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDAC2721300A7E0015133A /* HomeViewController.swift */; };
 		9708BDB3DA2AD867CE3FEBD5 /* Pods_Aysi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */; };
 		BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */; };
-		BA83B1AE212AA56A007B573B /* InitialRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA83B1AD212AA56A007B573B /* InitialRegister.storyboard */; };
-		BA83B1B0212AA5BD007B573B /* InitialRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83B1AF212AA5BD007B573B /* InitialRegisterViewController.swift */; };
 		BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */; };
 		BA9D3A6D2122CA6D000BE8A4 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */; };
 		BA9D3A6F2122CB0A000BE8A4 /* Immunization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */; };
@@ -23,7 +20,11 @@
 		BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA4B0382122C5E4001BE550 /* Aysi.xcdatamodeld */; };
 		BAA4B03C2122C5E6001BE550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA4B03B2122C5E6001BE550 /* Assets.xcassets */; };
 		BAA4B03F2122C5E6001BE550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA4B03D2122C5E6001BE550 /* LaunchScreen.storyboard */; };
-		BAD55101212FCF4B001ECE11 /* DataBayiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD55100212FCF4B001ECE11 /* DataBayiViewController.swift */; };
+		BAB59CA221328FAB001581F1 /* InitialRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB59CA021328FAB001581F1 /* InitialRegister.storyboard */; };
+		BAB59CA321328FAB001581F1 /* DataBayi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB59CA121328FAB001581F1 /* DataBayi.storyboard */; };
+		BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */; };
+		BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA521328FE8001581F1 /* HomeViewController.swift */; };
+		BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +32,7 @@
 		0B812A14B6A795B18C4300ED /* Pods-Aysi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aysi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aysi/Pods-Aysi.debug.xcconfig"; sourceTree = "<group>"; };
 		37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aysi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EDAC252130009D0015133A /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
-		89EDAC2721300A7E0015133A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BA83B1AD212AA56A007B573B /* InitialRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialRegister.storyboard; sourceTree = "<group>"; };
-		BA83B1AF212AA5BD007B573B /* InitialRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRegisterViewController.swift; sourceTree = "<group>"; };
 		BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chart.storyboard; sourceTree = "<group>"; };
 		BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Immunization.storyboard; sourceTree = "<group>"; };
@@ -47,7 +45,11 @@
 		BAA4B03B2122C5E6001BE550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAA4B03E2122C5E6001BE550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAA4B0402122C5E6001BE550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAD55100212FCF4B001ECE11 /* DataBayiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBayiViewController.swift; sourceTree = "<group>"; };
+		BAB59CA021328FAB001581F1 /* InitialRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialRegister.storyboard; sourceTree = "<group>"; };
+		BAB59CA121328FAB001581F1 /* DataBayi.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataBayi.storyboard; sourceTree = "<group>"; };
+		BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBayiViewController.swift; sourceTree = "<group>"; };
+		BAB59CA521328FE8001581F1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialRegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,8 @@
 		BAA4B0482122C679001BE550 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA83B1AD212AA56A007B573B /* InitialRegister.storyboard */,
+				BAB59CA021328FAB001581F1 /* InitialRegister.storyboard */,
+				BAB59CA121328FAB001581F1 /* DataBayi.storyboard */,
 				BAA4B0352122C5E4001BE550 /* Main.storyboard */,
 				BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */,
 				BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */,
@@ -136,10 +139,10 @@
 		BAA4B0492122C67D001BE550 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA83B1AF212AA5BD007B573B /* InitialRegisterViewController.swift */,
-				BAD55100212FCF4B001ECE11 /* DataBayiViewController.swift */,
+				BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */,
+				BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */,
+				BAB59CA521328FE8001581F1 /* HomeViewController.swift */,
 				89EDAC252130009D0015133A /* AccountSettingsViewController.swift */,
-				89EDAC2721300A7E0015133A /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,13 +218,14 @@
 			files = (
 				BAA4B03F2122C5E6001BE550 /* LaunchScreen.storyboard in Resources */,
 				BAA4B03C2122C5E6001BE550 /* Assets.xcassets in Resources */,
+				BAB59CA221328FAB001581F1 /* InitialRegister.storyboard in Resources */,
 				BA9D3A6D2122CA6D000BE8A4 /* Chart.storyboard in Resources */,
 				BAA4B0372122C5E4001BE550 /* Main.storyboard in Resources */,
 				BA9D3A6F2122CB0A000BE8A4 /* Immunization.storyboard in Resources */,
+				BAB59CA321328FAB001581F1 /* DataBayi.storyboard in Resources */,
 				BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */,
 				BA9D3A712122CB1D000BE8A4 /* MedicalRecord.storyboard in Resources */,
 				BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */,
-				BA83B1AE212AA56A007B573B /* InitialRegister.storyboard in Resources */,
 				BA9D3A732122D2F1000BE8A4 /* AccountSettings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,12 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA83B1B0212AA5BD007B573B /* InitialRegisterViewController.swift in Sources */,
-				BAD55101212FCF4B001ECE11 /* DataBayiViewController.swift in Sources */,
+				BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */,
+				BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */,
 				89EDAC262130009D0015133A /* AccountSettingsViewController.swift in Sources */,
+				BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */,
 				BAA4B0322122C5E4001BE550 /* AppDelegate.swift in Sources */,
 				BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */,
-				89EDAC2821300A7E0015133A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
