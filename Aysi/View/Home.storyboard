@@ -25,16 +25,42 @@
                     <view key="view" contentMode="scaleToFill" id="4xs-Bh-Ygw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aiy-XL-ucW">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header-3" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-WY-5F1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tahukah Anda" translatesAutoresizingMaskIntoConstraints="NO" id="EsO-ot-BsU">
+                                        <rect key="frame" x="23" y="33" width="327" height="156"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEA-2y-73Z">
+                                        <rect key="frame" x="31" y="70" width="310" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SI BUAH HATI" translatesAutoresizingMaskIntoConstraints="NO" id="jSu-yq-3Bv">
+                                        <rect key="frame" x="23" y="316" width="146" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="trailing" secondItem="Yf2-eD-O7L" secondAttribute="trailing" id="8pH-3S-uHJ"/>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="leading" secondItem="Yf2-eD-O7L" secondAttribute="leading" id="IHW-ET-E9m"/>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="top" secondItem="Yf2-eD-O7L" secondAttribute="top" id="TvG-6n-sj4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yf2-eD-O7L"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jnl-pl-82g">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="l1X-X6-MY1">
-                            <connections>
-                                <segue destination="bfW-Fj-lvM" kind="show" id="1hr-hs-FXQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Jnl-pl-82g"/>
+                    <connections>
+                        <outlet property="navigationItemTop" destination="Jnl-pl-82g" id="maJ-55-HIs"/>
+                        <segue destination="bfW-Fj-lvM" kind="show" identifier="homeToAccountSetting" id="Vxg-vm-SRe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X19-Dq-rK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,4 +87,9 @@
             <point key="canvasLocation" x="957.60000000000002" y="126.35467980295567"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Header-3" width="750" height="730"/>
+        <image name="SI BUAH HATI" width="228" height="28"/>
+        <image name="Tahukah Anda" width="626" height="300"/>
+    </resources>
 </document>
