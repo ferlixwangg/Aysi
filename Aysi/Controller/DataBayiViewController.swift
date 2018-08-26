@@ -19,7 +19,7 @@ class DataBayiViewController: UIViewController {
     
     // MARK: - Variables
     let genderPicker = UIPickerView()
-    let genderList = ["Laki-laki", "Perempuan"]
+    let genderList = ["Cowok", "Cewek"]
     var pickerMoved = Bool()
     
     let datePicker = UIDatePicker()

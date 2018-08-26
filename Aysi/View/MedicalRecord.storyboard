@@ -39,7 +39,7 @@
         <!--Medical Record-->
         <scene sceneID="Cha-d1-EEv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xl6-a6-Kdj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="medRecNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="Xl6-a6-Kdj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Medical Record" id="g1N-bV-pFz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

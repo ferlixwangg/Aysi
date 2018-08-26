@@ -43,7 +43,7 @@
         <!--Home-->
         <scene sceneID="z6f-Vj-GtO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h1l-c0-MPS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="h1l-c0-MPS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="qOo-NJ-sth"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
