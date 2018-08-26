@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        try! Auth.auth().signOut()
+        
         var initialViewController: UIViewController!
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
@@ -31,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let tabVC = self.window?.rootViewController as! UITabBarController
             let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationVC") as! UINavigationController
             let chartVC = UIStoryboard(name: "Chart", bundle: nil).instantiateViewController(withIdentifier: "chartVC")
-            let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC") 
+            let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC")
             let medicalRecordVC = UIStoryboard(name: "MedicalRecord", bundle: nil).instantiateViewController(withIdentifier: "medRecNavigationVC") as! UINavigationController
             
             tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]

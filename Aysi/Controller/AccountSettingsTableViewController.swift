@@ -85,23 +85,23 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             masukAkunOutlet.isEnabled = false
             saveBtnOutlet.isEnabled = true
             
-            let userID = Auth.auth().currentUser?.uid
-            self.ref.child("child").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
-                 let data = snapshot.value as? [String: Any]
-                
-                guard let childName = data?["childName"] as? String,
-                    let gender = data?["gender"] as? String,
-                    let dob = data?["dob"] as? String,
-                    childName != "",
-                    gender != "",
-                    dob != ""
-                    else{
-                        print("Data is empty")
-                        return
-                }
-                
-                print("success")
-            }
+//            let userID = Auth.auth().currentUser?.uid
+//            self.ref.child("child").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+//                 let data = snapshot.value as? [String: Any]
+//                
+//                guard let childName = data?["childName"] as? String,
+//                    let gender = data?["gender"] as? String,
+//                    let dob = data?["dob"] as? String,
+//                    childName != "",
+//                    gender != "",
+//                    dob != ""
+//                    else{
+//                        print("Data is empty")
+//                        return
+//                }
+//                
+//                print("success")
+//            }
         }
         
         if UserDefaults.standard.object(forKey: "contentNotif") != nil {

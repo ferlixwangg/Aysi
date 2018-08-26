@@ -62,16 +62,22 @@ class InitialRegisterViewController: UIViewController {
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
+        self.view.layer.add(transition, forKey: kCATransition)
         present(vc, animated: false, completion: nil)
     }
     
     func moveToHomePage() {
-        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.definesPresentationContext = true
-        vc.modalPresentationStyle = .overCurrentContext
-        present(navigationController, animated: true, completion: nil)
+        let tabVC = UITabBarController()
+        
+        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationVC") as! UINavigationController
+        let chartVC = UIStoryboard(name: "Chart", bundle: nil).instantiateViewController(withIdentifier: "chartVC")
+        let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC")
+        let medicalRecordVC = UIStoryboard(name: "MedicalRecord", bundle: nil).instantiateViewController(withIdentifier: "medRecNavigationVC") as! UINavigationController
+        
+        tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]
+        tabVC.selectedViewController = homeVC
+        
+        present(tabVC, animated: true, completion: nil)
     }
     
     // MARK: - Sign In Process
