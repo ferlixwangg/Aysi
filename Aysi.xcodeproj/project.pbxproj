@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89DD63702132AE5C0038DC5E /* AccountSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DD636F2132AE5C0038DC5E /* AccountSettings.storyboard */; };
 		89EDAC262130009D0015133A /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDAC252130009D0015133A /* AccountSettingsViewController.swift */; };
 		9708BDB3DA2AD867CE3FEBD5 /* Pods_Aysi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */; };
 		BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */; };
@@ -14,7 +15,6 @@
 		BA9D3A6D2122CA6D000BE8A4 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */; };
 		BA9D3A6F2122CB0A000BE8A4 /* Immunization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */; };
 		BA9D3A712122CB1D000BE8A4 /* MedicalRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A702122CB1D000BE8A4 /* MedicalRecord.storyboard */; };
-		BA9D3A732122D2F1000BE8A4 /* AccountSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A722122D2F1000BE8A4 /* AccountSettings.storyboard */; };
 		BAA4B0322122C5E4001BE550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4B0312122C5E4001BE550 /* AppDelegate.swift */; };
 		BAA4B0372122C5E4001BE550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA4B0352122C5E4001BE550 /* Main.storyboard */; };
 		BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA4B0382122C5E4001BE550 /* Aysi.xcdatamodeld */; };
@@ -31,13 +31,13 @@
 		062280EA38180DFDD7214973 /* Pods-Aysi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aysi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aysi/Pods-Aysi.release.xcconfig"; sourceTree = "<group>"; };
 		0B812A14B6A795B18C4300ED /* Pods-Aysi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aysi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aysi/Pods-Aysi.debug.xcconfig"; sourceTree = "<group>"; };
 		37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aysi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89DD636F2132AE5C0038DC5E /* AccountSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountSettings.storyboard; sourceTree = "<group>"; };
 		89EDAC252130009D0015133A /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chart.storyboard; sourceTree = "<group>"; };
 		BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Immunization.storyboard; sourceTree = "<group>"; };
 		BA9D3A702122CB1D000BE8A4 /* MedicalRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicalRecord.storyboard; sourceTree = "<group>"; };
-		BA9D3A722122D2F1000BE8A4 /* AccountSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountSettings.storyboard; sourceTree = "<group>"; };
 		BAA4B02E2122C5E4001BE550 /* Aysi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aysi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA4B0312122C5E4001BE550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAA4B0362122C5E4001BE550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +123,7 @@
 		BAA4B0482122C679001BE550 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89DD636F2132AE5C0038DC5E /* AccountSettings.storyboard */,
 				BAB59CA021328FAB001581F1 /* InitialRegister.storyboard */,
 				BAB59CA121328FAB001581F1 /* DataBayi.storyboard */,
 				BAA4B0352122C5E4001BE550 /* Main.storyboard */,
@@ -130,7 +131,6 @@
 				BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */,
 				BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */,
 				BA9D3A702122CB1D000BE8A4 /* MedicalRecord.storyboard */,
-				BA9D3A722122D2F1000BE8A4 /* AccountSettings.storyboard */,
 				BAA4B03D2122C5E6001BE550 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -223,10 +223,10 @@
 				BAA4B0372122C5E4001BE550 /* Main.storyboard in Resources */,
 				BA9D3A6F2122CB0A000BE8A4 /* Immunization.storyboard in Resources */,
 				BAB59CA321328FAB001581F1 /* DataBayi.storyboard in Resources */,
+				89DD63702132AE5C0038DC5E /* AccountSettings.storyboard in Resources */,
 				BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */,
 				BA9D3A712122CB1D000BE8A4 /* MedicalRecord.storyboard in Resources */,
 				BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */,
-				BA9D3A732122D2F1000BE8A4 /* AccountSettings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
