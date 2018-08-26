@@ -19,7 +19,7 @@ class DataBayiViewController: UIViewController {
     
     // MARK: - Variables
     let genderPicker = UIPickerView()
-    let genderList = ["Laki-laki", "Perempuan"]
+    let genderList = ["Cowok", "Cewek"]
     var pickerMoved = Bool()
     
     let datePicker = UIDatePicker()
@@ -73,22 +73,22 @@ class DataBayiViewController: UIViewController {
             return
         }
         
-        let data = [
+        let babyData = [
             "childName" : childName,
             "gender" : gender,
             "dob": dobFinal
         ]
         
-        ref?.child("child").child("\(user!.uid)").updateChildValues(data) {
+        ref?.child("child").child("\(user!.uid)").updateChildValues(babyData) {
             (error:Error?, ref:DatabaseReference) in
             if let error = error {
                 print("Data could not be saved: \(error.localizedDescription).")
             } else {
                 print("Data saved successfully!")
+                UserDefaults.standard.set(babyData, forKey: "BabyData")
+                self.moveToHomePage()
             }
         }
-        
-        moveToHomePage()
     }
     
     func moveToHomePage() {

@@ -13,7 +13,7 @@
         <!--Chart-->
         <scene sceneID="Gls-Am-QiX">
             <objects>
-                <viewController id="gVI-CF-tFj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chartVC" id="gVI-CF-tFj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3PY-Vq-0Z3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
