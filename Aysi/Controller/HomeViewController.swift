@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var pageScrollView: UIScrollView!
+    @IBOutlet weak var tipsContainerView: UIView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     // MARK: - Variables
     
@@ -35,12 +37,11 @@ class HomeViewController: UIViewController {
             }
         })
         
-        
-        
 //        let dataBayi = UserDefaults.standard.object(forKey: "BabyData") as? [String : String] ?? [String : String]()
 //        print(dataBayi["childName"]!)
 //        print(dataBayi["gender"]!)
 //        print(dataBayi["dob"]!)
+        
     }
     
     // MARK: - Functions
@@ -89,6 +90,12 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: customViewRight)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tipsPageViewController = segue.destination as? TipsPageViewController {
+            tipsPageViewController.tipsDelegate = self
+        }
+    }
+    
     @objc func settingButtonPressed() {
         performSegue(withIdentifier: "homeToAccountSetting", sender: self)
     }
@@ -96,12 +103,24 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        var offset = scrollView.contentOffset.y / 120
+        var offset = scrollView.contentOffset.y / 100
         
         if offset > 1 {
             offset = 1
-            let color = UIColor(red: 1, green: 1, blue: 1, alpha: offset)
-            self.navigationController?.navigationBar.backgroundColor = color
         }
+        
+        let color = UIColor(red: 1, green: 1, blue: 1, alpha: offset)
+        self.navigationController?.navigationBar.backgroundColor = color
+        UIApplication.shared.statusBarView?.backgroundColor = color
+    }
+}
+
+extension HomeViewController: TipsDelegate {
+    func tipsPageCount(tipsPageViewController: TipsPageViewController, didUpdatePageCount count: Int) {
+        pageControl.numberOfPages = count
+    }
+    
+    func tipsPageIndex(tipsPageViewController: TipsPageViewController, didUpdatePageIndex index: Int) {
+        pageControl.currentPage = index
     }
 }
