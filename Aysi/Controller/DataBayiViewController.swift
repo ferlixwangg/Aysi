@@ -25,8 +25,6 @@ class DataBayiViewController: UIViewController {
     let datePicker = UIDatePicker()
     var dob: String?
     
-    let user = Auth.auth().currentUser
-    
     var ref:DatabaseReference!
     
     // MARK: - App Life Cycle
@@ -79,7 +77,7 @@ class DataBayiViewController: UIViewController {
             "dob": dobFinal
         ]
         
-        ref?.child("child").child("\(user!.uid)").updateChildValues(babyData) {
+        self.ref.child("child").child((Auth.auth().currentUser?.uid)!).updateChildValues(babyData) {
             (error:Error?, ref:DatabaseReference) in
             if let error = error {
                 print("Data could not be saved: \(error.localizedDescription).")
@@ -92,9 +90,17 @@ class DataBayiViewController: UIViewController {
     }
     
     func moveToHomePage() {
-        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
-        let navigationController = UINavigationController(rootViewController: vc)
-        present(navigationController, animated: true, completion: nil)
+        let tabVC = UITabBarController()
+        
+        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationVC") as! UINavigationController
+        let chartVC = UIStoryboard(name: "Chart", bundle: nil).instantiateViewController(withIdentifier: "chartVC")
+        let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC")
+        let medicalRecordVC = UIStoryboard(name: "MedicalRecord", bundle: nil).instantiateViewController(withIdentifier: "medRecNavigationVC") as! UINavigationController
+        
+        tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]
+        tabVC.selectedViewController = homeVC
+        
+        present(tabVC, animated: true, completion: nil)
     }
     
     @IBAction func jenisKelaminFieldPressed() {
@@ -117,7 +123,6 @@ extension DataBayiViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func createGenderPicker() {
         
         genderPicker.delegate = self
-//        genderPicker.backgroundColor = UIColor.init(displayP3Red: 237/255, green: 237/255, blue: 238/255, alpha: 1.0)
         
         // Create Toolbar for the Picker
         let toolbar = UIToolbar()

@@ -393,10 +393,10 @@
                         <constraints>
                             <constraint firstItem="PMR-DA-Jy5" firstAttribute="top" secondItem="hsu-ty-nvl" secondAttribute="bottom" constant="73" id="5Nd-0e-bKz"/>
                             <constraint firstItem="e8W-A6-fqD" firstAttribute="centerY" secondItem="FLA-vo-Nyh" secondAttribute="centerY" id="8p8-F7-pIV"/>
+                            <constraint firstItem="PMR-DA-Jy5" firstAttribute="centerX" secondItem="FLA-vo-Nyh" secondAttribute="centerX" id="ApA-40-PvY"/>
                             <constraint firstItem="hsu-ty-nvl" firstAttribute="centerX" secondItem="FLA-vo-Nyh" secondAttribute="centerX" id="Dpl-SX-14G"/>
                             <constraint firstItem="hsu-ty-nvl" firstAttribute="top" secondItem="VFS-BL-S9N" secondAttribute="top" id="LQr-lf-SbT"/>
                             <constraint firstItem="hsu-ty-nvl" firstAttribute="leading" secondItem="FLA-vo-Nyh" secondAttribute="leading" id="MsB-Y3-YSm"/>
-                            <constraint firstItem="FLA-vo-Nyh" firstAttribute="trailing" secondItem="PMR-DA-Jy5" secondAttribute="trailing" constant="57" id="Smz-sq-h5N"/>
                             <constraint firstItem="e8W-A6-fqD" firstAttribute="centerX" secondItem="FLA-vo-Nyh" secondAttribute="centerX" id="XPz-sU-bvV"/>
                             <constraint firstItem="hsu-ty-nvl" firstAttribute="trailing" secondItem="FLA-vo-Nyh" secondAttribute="trailing" id="mrq-ww-4QP"/>
                             <constraint firstItem="e8W-A6-fqD" firstAttribute="top" secondItem="hsu-ty-nvl" secondAttribute="bottom" constant="73" id="tJe-Y8-lbz"/>

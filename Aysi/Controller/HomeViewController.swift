@@ -12,7 +12,6 @@ import UserNotifications
 class HomeViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var navigationItemTop: UINavigationItem!
     
     // MARK: - Variables
     
@@ -20,8 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        createNavBarTitle()
-        createNavBarButtons()
+        setupNavBarItems()
         
         // Transparent Nav Bar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -45,48 +43,50 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - Functions
-    func createNavBarTitle() {
-        let image = #imageLiteral(resourceName: "SETTINGS")
-        let titleView = UIImageView(image: image)
+    func setupNavBarItems() {
+        let navBarWidth = self.navigationController?.navigationBar.frame.width
+        let navBarButtonViewWidth = (navBarWidth! - 140) / 2
         
-        titleView.frame = CGRect(x: 0, y: 0, width: 115, height: 23)
-        titleView.contentMode = .scaleAspectFit
+        // Nav Bar Title
+        let imageView = UIImageView(image: UIImage(named: "Settings"))
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        let titleView = UIView(frame: CGRect(x: 10, y: 0, width: 90, height: 20))
+        imageView.frame = titleView.bounds
+        titleView.addSubview(imageView)
         
-        navigationItemTop.titleView = titleView
-    }
-    
-    func createNavBarButtons() {
-        // Setting button
-        let settingButton = UIButton(type: .custom)
-        settingButton.setImage(UIImage(named: "Settings icon"), for: .normal)
-        settingButton.frame = CGRect(x: 0, y: 0, width: 18, height: 18)
-        settingButton.addTarget(self, action: #selector(HomeViewController.settingButtonPressed), for: .touchUpInside)
-        settingButton.widthAnchor.constraint(equalToConstant: 18.0).isActive = true
-        settingButton.heightAnchor.constraint(equalToConstant: 18.0).isActive = true
-        let item4 = UIBarButtonItem(customView: settingButton)
-        
-        // Right Arrow button
-        let rightArrowButton = UIButton(type: .custom)
-        rightArrowButton.setImage(UIImage(named: "Right arrow"), for: .normal)
-        rightArrowButton.frame = CGRect(x: 0, y: 0, width: 18, height: 18)
-        rightArrowButton.addTarget(self, action: #selector(HomeViewController.settingButtonPressed), for: .touchUpInside)
-        rightArrowButton.widthAnchor.constraint(equalToConstant: 120.0).isActive = true
-        rightArrowButton.heightAnchor.constraint(equalToConstant: 18.0).isActive = true
-        let item3 = UIBarButtonItem(customView: rightArrowButton)
-        item3.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 120)
-        
-        // Left Arrow button
+        self.navigationItem.titleView = titleView
+
+        // Nav bar buttons
+        // Left Arrow Button
         let leftArrowButton = UIButton(type: .custom)
         leftArrowButton.setImage(UIImage(named: "Left arrow"), for: .normal)
-        leftArrowButton.frame = CGRect(x: 0, y: 0, width: 18, height: 18)
         leftArrowButton.addTarget(self, action: #selector(HomeViewController.settingButtonPressed), for: .touchUpInside)
-        leftArrowButton.widthAnchor.constraint(equalToConstant: 180.0).isActive = true
-        leftArrowButton.heightAnchor.constraint(equalToConstant: 18.0).isActive = true
-        let item2 = UIBarButtonItem(customView: leftArrowButton)
-        item2.imageInsets = UIEdgeInsets(top: 0, left: 80, bottom: 0, right: 0)
+        let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: navBarButtonViewWidth, height: 32))
+        leftArrowButton.contentMode = .scaleAspectFit
+        leftArrowButton.frame = CGRect(x: customViewLeft.frame.width-30, y: customViewLeft.frame.midY-10, width: 13, height: 17)
+        customViewLeft.addSubview(leftArrowButton)
         
-        navigationItemTop.setRightBarButtonItems([item4, item3], animated: true)
-        navigationItemTop.setLeftBarButtonItems([item2], animated: true)
+        // Right Arrow Button
+        let RightArrowButton = UIButton(type: .custom)
+        RightArrowButton.setImage(UIImage(named: "Right arrow"), for: .normal)
+        RightArrowButton.addTarget(self, action: #selector(HomeViewController.settingButtonPressed), for: .touchUpInside)
+        RightArrowButton.contentMode = .scaleAspectFit
+        
+        // Setting Button
+        let SettingButton = UIButton(type: .custom)
+        SettingButton.setImage(UIImage(named: "Settings icon"), for: .normal)
+        SettingButton.addTarget(self, action: #selector(HomeViewController.settingButtonPressed), for: .touchUpInside)
+        SettingButton.contentMode = .scaleAspectFit
+        
+        let customViewRight = UIView(frame: CGRect(x: 0, y: 0, width: navBarButtonViewWidth, height: 32))
+        RightArrowButton.frame = CGRect(x: 15, y: customViewRight.frame.midY-10, width: 13, height: 17)
+        SettingButton.frame = CGRect(x: customViewRight.frame.width-20, y: customViewRight.frame.midY-10, width: 20, height: 20)
+        customViewRight.addSubview(RightArrowButton)
+        customViewRight.addSubview(SettingButton)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: customViewRight)
+        
     }
     
     @objc func settingButtonPressed() {
