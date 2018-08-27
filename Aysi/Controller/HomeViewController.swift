@@ -12,6 +12,7 @@ import UserNotifications
 class HomeViewController: UIViewController {
 
     // MARK: - Outlets
+    @IBOutlet weak var pageScrollView: UIScrollView!
     
     // MARK: - Variables
     
@@ -86,10 +87,23 @@ class HomeViewController: UIViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: customViewRight)
-        
     }
     
     @objc func settingButtonPressed() {
         performSegue(withIdentifier: "homeToAccountSetting", sender: self)
+    }
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var offset = scrollView.contentOffset.y / 120
+        
+        if offset > 1 {
+            offset = 1
+            let color = UIColor(red: 1, green: 1, blue: 1, alpha: offset)
+            self.navigationController?.navigationBar.backgroundColor = color
+            UIApplication.shared.statusbar
+            
+        }
     }
 }
