@@ -27,13 +27,13 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         // Notification
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge], completionHandler: { (success, error) in
-//            if error != nil {
-//                print("Notification Authorization Unsuccessful")
-//            } else {
-//                print("Notification Authorization Successful")
-//            }
-//        })
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge], completionHandler: { (success, error) in
+            if error != nil {
+                print("Notification Authorization Unsuccessful")
+            } else {
+                print("Notification Authorization Successful")
+            }
+        })
         
         
         
@@ -102,8 +102,6 @@ extension HomeViewController: UIScrollViewDelegate {
             offset = 1
             let color = UIColor(red: 1, green: 1, blue: 1, alpha: offset)
             self.navigationController?.navigationBar.backgroundColor = color
-            UIApplication.shared.statusbar
-            
         }
     }
 }
