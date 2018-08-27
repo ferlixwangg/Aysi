@@ -77,19 +77,22 @@ class NotificationController {
         for i in 0...8{
             mainNotification(cTitle: titleArr[i], cBody: contentArr[i], notifNum: i, notifTrigger: notifDate[i])
         }
-        repeatingChartNotification(at: bDay!, babyName: babyName)
     }
-    
-    //Remove all notification that requires birthday to schedule
+    //Remove chart notifications
+    func removeChartNotifs() {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["chartNotification"])
+    }
+
+    //Remove all content notifications
     func removeContentNotifs() {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["contentNotif1", "contentNotif2", "contentNotif3", "contentNotif4", "contentNotif5", "contentNotif6", "contentNotif7", "contentNotif8", "contentNotif9", "chartNotification"])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["contentNotif1", "contentNotif2", "contentNotif3", "contentNotif4", "contentNotif5", "contentNotif6", "contentNotif7", "contentNotif8", "contentNotif9"])
     }
     //Remove all call notifications on weekends
     func removeCallNotifsWeekends() {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["callNotification1", "callNotification7"])
     }
     //Remove all call notifications on weekdays
-    func removeVallNotifsWeekdats() {
+    func removeVallNotifsWeekdays() {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["callNotification2", "callNotification3", "callNotification4", "callNotification5", "callNotification6"])
     }
     
