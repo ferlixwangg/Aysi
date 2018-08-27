@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        try! Auth.auth().signOut()
-        
         var initialViewController: UIViewController!
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
@@ -39,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]
             tabVC.selectedViewController = homeVC
             self.window?.makeKeyAndVisible()
-//            initialViewController = UINavigationController(rootViewController: vc)
             
         } else {
             initialViewController = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
