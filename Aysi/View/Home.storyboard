@@ -23,131 +23,123 @@
             <objects>
                 <viewController storyboardIdentifier="homeVC" id="i7j-Lc-vWo" customClass="HomeViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xs-Bh-Ygw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="990"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiy-XL-ucW">
-                                <rect key="frame" x="0.0" y="88" width="375" height="1029"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="907"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZp-e5-dSd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-iP-1ob">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header-3" translatesAutoresizingMaskIntoConstraints="NO" id="4t5-Rc-U8R">
-                                                <rect key="frame" x="0.0" y="-44" width="375" height="354"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header-3" translatesAutoresizingMaskIntoConstraints="NO" id="HoV-FO-cbo">
+                                                <rect key="frame" x="0.0" y="-1" width="375" height="166"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Footer-1" translatesAutoresizingMaskIntoConstraints="NO" id="vVw-DF-BZl">
-                                                <rect key="frame" x="0.0" y="875" width="375" height="105"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tahukah Anda" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-dh-M3K">
+                                                <rect key="frame" x="26" y="19" width="322" height="130"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlA-rA-pzO">
-                                                <rect key="frame" x="30" y="59" width="314" height="128"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tahukah Anda 1" translatesAutoresizingMaskIntoConstraints="NO" id="4w6-0g-4oF">
+                                                <rect key="frame" x="26" y="40" width="322" height="88"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SI BUAH HATI" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-pR-FJs">
-                                                <rect key="frame" x="20" y="295" width="129" height="69"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SI BUAH HATI" translatesAutoresizingMaskIntoConstraints="NO" id="hdY-d3-dx2">
+                                                <rect key="frame" x="26" y="269" width="121" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G0v-1Y-CAv" userLabel="Baby's Content">
-                                                <rect key="frame" x="20" y="350" width="335" height="185"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SI BELAHAN HATI" translatesAutoresizingMaskIntoConstraints="NO" id="rNs-DM-nT1">
+                                                <rect key="frame" x="26" y="505" width="151" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mJ5-2I-lIj">
+                                                <rect key="frame" x="26" y="298" width="349" height="185"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I20-FH-qL8">
-                                                    <size key="itemSize" width="124" height="185"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WEo-9c-Thy">
+                                                    <size key="itemSize" width="125" height="185"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="obq-Cc-Vbm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="185"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2tN-Bh-2pW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="124" height="185"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5w-zk-WTV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="185"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                            </subviews>
                                                         </view>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mog-Zx-gks" userLabel="Baby's Content">
-                                                <rect key="frame" x="20" y="595" width="335" height="185"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e08-qM-LQN">
+                                                <rect key="frame" x="26" y="538" width="349" height="185"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gjP-xO-vsq">
-                                                    <size key="itemSize" width="124" height="185"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gcS-JP-D5i">
+                                                    <size key="itemSize" width="125" height="185"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qmB-eW-FnS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="185"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KDd-Lh-vQV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="124" height="185"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-os-U3Q">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="185"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                            </subviews>
                                                         </view>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SI BELAHAN HATI" translatesAutoresizingMaskIntoConstraints="NO" id="lqw-sa-g9c">
-                                                <rect key="frame" x="20" y="540" width="173" height="69"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Footer-1" translatesAutoresizingMaskIntoConstraints="NO" id="qFd-1z-334">
+                                                <rect key="frame" x="0.0" y="816" width="375" height="114"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HOW TO" translatesAutoresizingMaskIntoConstraints="NO" id="iM8-18-Yji">
-                                                <rect key="frame" x="44" y="903" width="286" height="57"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tahukah Anda" translatesAutoresizingMaskIntoConstraints="NO" id="gg6-2X-FMV">
-                                                <rect key="frame" x="20" y="17" width="335" height="178"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HOW TO" translatesAutoresizingMaskIntoConstraints="NO" id="kqe-DQ-Y1u">
+                                                <rect key="frame" x="67" y="851" width="240" height="68"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="980" id="61e-Pf-ZSm"/>
+                                            <constraint firstAttribute="height" constant="950" id="sj0-iZ-ptF"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="EZp-e5-dSd" secondAttribute="bottom" id="era-ZU-lSe"/>
-                                    <constraint firstAttribute="trailing" secondItem="EZp-e5-dSd" secondAttribute="trailing" id="fWz-FX-ATn"/>
-                                    <constraint firstItem="EZp-e5-dSd" firstAttribute="leading" secondItem="Aiy-XL-ucW" secondAttribute="leading" id="gOT-XQ-tiY"/>
-                                    <constraint firstItem="EZp-e5-dSd" firstAttribute="top" secondItem="Aiy-XL-ucW" secondAttribute="top" id="hCY-wz-94U"/>
-                                    <constraint firstItem="EZp-e5-dSd" firstAttribute="centerX" secondItem="Aiy-XL-ucW" secondAttribute="centerX" id="ime-LE-lH8"/>
+                                    <constraint firstItem="2pE-iP-1ob" firstAttribute="leading" secondItem="Aiy-XL-ucW" secondAttribute="leading" id="GDC-bI-CnT"/>
+                                    <constraint firstItem="2pE-iP-1ob" firstAttribute="top" secondItem="Aiy-XL-ucW" secondAttribute="top" id="rXG-4k-mfL"/>
+                                    <constraint firstAttribute="bottom" secondItem="2pE-iP-1ob" secondAttribute="bottom" id="uHB-HU-AbH"/>
+                                    <constraint firstAttribute="trailing" secondItem="2pE-iP-1ob" secondAttribute="trailing" id="wFx-jV-V2d"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="i7j-Lc-vWo" id="g1A-fs-vZR"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="trailing" secondItem="Yf2-eD-O7L" secondAttribute="trailing" id="8pH-3S-uHJ"/>
-                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="leading" secondItem="Yf2-eD-O7L" secondAttribute="leading" id="IHW-ET-E9m"/>
-                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="top" secondItem="Yf2-eD-O7L" secondAttribute="top" id="TvG-6n-sj4"/>
-                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="bottom" secondItem="Yf2-eD-O7L" secondAttribute="bottom" id="ubK-Qt-bSN"/>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="leading" secondItem="Yf2-eD-O7L" secondAttribute="leading" id="5lV-zr-DzF"/>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="top" secondItem="4xs-Bh-Ygw" secondAttribute="top" id="OcR-oq-76d"/>
+                            <constraint firstItem="2pE-iP-1ob" firstAttribute="width" secondItem="4xs-Bh-Ygw" secondAttribute="width" id="i4j-ud-jat"/>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="bottom" secondItem="Yf2-eD-O7L" secondAttribute="bottom" id="lZ6-TI-UZM"/>
+                            <constraint firstItem="Aiy-XL-ucW" firstAttribute="trailing" secondItem="Yf2-eD-O7L" secondAttribute="trailing" id="peK-OJ-2B0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yf2-eD-O7L"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jnl-pl-82g"/>
-                    <size key="freeformSize" width="375" height="1200"/>
+                    <size key="freeformSize" width="375" height="990"/>
                     <connections>
+                        <outlet property="pageScrollView" destination="Aiy-XL-ucW" id="QT6-Xt-FKG"/>
                         <segue destination="bfW-Fj-lvM" kind="show" identifier="homeToAccountSetting" id="Vxg-vm-SRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X19-Dq-rK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="126.35467980295567"/>
+            <point key="canvasLocation" x="1941.5999999999999" y="125.61576354679804"/>
         </scene>
         <!--Home-->
         <scene sceneID="z6f-Vj-GtO">
@@ -171,11 +163,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Footer-1" width="375" height="261"/>
+        <image name="Footer-1" width="750" height="522"/>
         <image name="HOW TO" width="648" height="132"/>
         <image name="Header-3" width="750" height="730"/>
         <image name="SI BELAHAN HATI" width="292" height="28"/>
         <image name="SI BUAH HATI" width="228" height="28"/>
         <image name="Tahukah Anda" width="626" height="300"/>
+        <image name="Tahukah Anda 1" width="626" height="300"/>
     </resources>
 </document>
