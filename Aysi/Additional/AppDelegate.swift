@@ -15,44 +15,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
+        let ud = UserDefaults.standard.dictionaryRepresentation()
+        print(ud)
         var initialViewController: UIViewController!
+        
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [
                 NSAttributedStringKey.font : UIFont(name: "Avenir Next", size: 17)!,
                 NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.08039890975, green: 0.3413983583, blue: 0.4325652719, alpha: 1),
                 ], for: .normal)
-        if Auth.auth().currentUser != nil && UserDefaults.standard.object(forKey: "BabyData") == nil {
-            try! Auth.auth().signOut()
-            initialViewController = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-        }
         
-        
-        if Auth.auth().currentUser != nil {
-            let tabVC = self.window?.rootViewController as! UITabBarController
-            let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationVC") as! UINavigationController
-            let chartVC = UIStoryboard(name: "Chart", bundle: nil).instantiateViewController(withIdentifier: "chartVC")
-            let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC")
-            let medicalRecordVC = UIStoryboard(name: "MedicalRecord", bundle: nil).instantiateViewController(withIdentifier: "medRecNavigationVC") as! UINavigationController
-            
-            tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]
-            tabVC.selectedViewController = homeVC
-            self.window?.makeKeyAndVisible()
-            
+        if Auth.auth().currentUser == nil {
+            if UserDefaults.standard.object(forKey: "BabyData") == nil {
+                initialViewController = UIStoryboard(name: "GetStarted", bundle: nil).instantiateViewController(withIdentifier: "getStartedVC")
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            } else {
+                moveToHome()
+            }
         } else {
-            initialViewController = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
+            if UserDefaults.standard.object(forKey: "BabyData") == nil {
+                try! Auth.auth().signOut()
+                initialViewController = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            } else {
+                moveToHome()
+            }
         }
         return true
     }
 
+    func moveToHome() {
+        let tabVC = self.window?.rootViewController as! UITabBarController
+        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationVC") as! UINavigationController
+        let chartVC = UIStoryboard(name: "Chart", bundle: nil).instantiateViewController(withIdentifier: "chartVC")
+        let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC")
+        let medicalRecordVC = UIStoryboard(name: "MedicalRecord", bundle: nil).instantiateViewController(withIdentifier: "medRecNavigationVC") as! UINavigationController
+        
+        tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]
+        tabVC.selectedViewController = homeVC
+        self.window?.makeKeyAndVisible()
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

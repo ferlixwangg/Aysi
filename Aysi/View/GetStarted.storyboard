@@ -10,20 +10,113 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Get Started View Controller-->
         <scene sceneID="kgf-Az-elA">
             <objects>
-                <viewController id="CZI-PH-p1g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="getStartedVC" id="CZI-PH-p1g" customClass="GetStartedViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="te9-MQ-PJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Get Started Background" translatesAutoresizingMaskIntoConstraints="NO" id="V9V-qU-Hyg">
+                                <rect key="frame" x="0.0" y="270" width="375" height="542"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Get Started Line" translatesAutoresizingMaskIntoConstraints="NO" id="WcX-lC-tcq">
+                                <rect key="frame" x="0.0" y="74" width="375" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="pMx-vL-ehf"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3r-AC-NYw">
+                                <rect key="frame" x="32" y="240" width="311" height="525"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Get Started Aysi" translatesAutoresizingMaskIntoConstraints="NO" id="O1K-rL-eT5">
+                                        <rect key="frame" x="91" y="8" width="128" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="T42-vN-ZSl"/>
+                                            <constraint firstAttribute="height" constant="68" id="dDo-WY-3UL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maternity" translatesAutoresizingMaskIntoConstraints="NO" id="wTj-AY-bej">
+                                        <rect key="frame" x="81" y="158" width="149" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="79" id="PtI-bh-XDw"/>
+                                            <constraint firstAttribute="width" constant="149" id="XEA-vf-T4o"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Membantu Anda menjag" translatesAutoresizingMaskIntoConstraints="NO" id="LRg-mn-aqX">
+                                        <rect key="frame" x="2" y="284" width="307" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="307" id="PV4-sZ-AVS"/>
+                                            <constraint firstAttribute="height" constant="45" id="oqH-yb-lI0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSa-NH-9yS">
+                                        <rect key="frame" x="4" y="380" width="303" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="303" id="Fv2-oa-660"/>
+                                            <constraint firstAttribute="height" constant="48" id="j3g-ku-hNH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="ayo mulai"/>
+                                        <connections>
+                                            <action selector="ayoMulaiButtonPressed" destination="CZI-PH-p1g" eventType="touchUpInside" id="m6L-WU-X5A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqm-nZ-ekZ">
+                                        <rect key="frame" x="4" y="446" width="303" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="303" id="5aI-hq-RoI"/>
+                                            <constraint firstAttribute="height" constant="48" id="jxk-bs-fGn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="tambah akun"/>
+                                        <connections>
+                                            <action selector="tambahAkunButtonPressed" destination="CZI-PH-p1g" eventType="touchUpInside" id="mqH-aH-YHb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lSa-NH-9yS" firstAttribute="centerX" secondItem="N3r-AC-NYw" secondAttribute="centerX" id="4EA-G6-eOw"/>
+                                    <constraint firstItem="O1K-rL-eT5" firstAttribute="centerX" secondItem="N3r-AC-NYw" secondAttribute="centerX" id="4Y8-ZS-87V"/>
+                                    <constraint firstAttribute="height" constant="525" id="4bL-fS-lWz"/>
+                                    <constraint firstItem="wTj-AY-bej" firstAttribute="centerX" secondItem="N3r-AC-NYw" secondAttribute="centerX" id="DpQ-ML-p6N"/>
+                                    <constraint firstAttribute="width" constant="311" id="JAy-TF-eyj"/>
+                                    <constraint firstItem="Qqm-nZ-ekZ" firstAttribute="top" secondItem="lSa-NH-9yS" secondAttribute="bottom" constant="18" id="SNB-K4-eHp"/>
+                                    <constraint firstItem="LRg-mn-aqX" firstAttribute="top" secondItem="wTj-AY-bej" secondAttribute="bottom" constant="47" id="ZbP-40-G1P"/>
+                                    <constraint firstItem="LRg-mn-aqX" firstAttribute="centerX" secondItem="N3r-AC-NYw" secondAttribute="centerX" id="gzF-dc-SUp"/>
+                                    <constraint firstItem="lSa-NH-9yS" firstAttribute="top" secondItem="LRg-mn-aqX" secondAttribute="bottom" constant="51" id="j09-6h-2yC"/>
+                                    <constraint firstItem="wTj-AY-bej" firstAttribute="top" secondItem="O1K-rL-eT5" secondAttribute="bottom" constant="82" id="qZw-WR-Us9"/>
+                                    <constraint firstItem="Qqm-nZ-ekZ" firstAttribute="centerX" secondItem="N3r-AC-NYw" secondAttribute="centerX" id="tTP-GR-o2p"/>
+                                    <constraint firstItem="O1K-rL-eT5" firstAttribute="top" secondItem="N3r-AC-NYw" secondAttribute="top" constant="8" id="yup-DG-DLc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V9V-qU-Hyg" firstAttribute="leading" secondItem="55G-rb-btw" secondAttribute="leading" id="34B-X2-Xuy"/>
+                            <constraint firstItem="WcX-lC-tcq" firstAttribute="top" secondItem="55G-rb-btw" secondAttribute="top" constant="30" id="3EP-Hp-hB6"/>
+                            <constraint firstItem="V9V-qU-Hyg" firstAttribute="top" secondItem="WcX-lC-tcq" secondAttribute="bottom" constant="101" id="7Ow-CG-22Q"/>
+                            <constraint firstItem="V9V-qU-Hyg" firstAttribute="trailing" secondItem="55G-rb-btw" secondAttribute="trailing" id="CPH-xd-CIY"/>
+                            <constraint firstItem="N3r-AC-NYw" firstAttribute="top" secondItem="WcX-lC-tcq" secondAttribute="bottom" constant="71" id="Ru9-PN-xuE"/>
+                            <constraint firstItem="WcX-lC-tcq" firstAttribute="leading" secondItem="55G-rb-btw" secondAttribute="leading" id="cZw-1O-Nsv"/>
+                            <constraint firstItem="N3r-AC-NYw" firstAttribute="centerX" secondItem="55G-rb-btw" secondAttribute="centerX" id="mSs-mg-AZx"/>
+                            <constraint firstItem="WcX-lC-tcq" firstAttribute="trailing" secondItem="55G-rb-btw" secondAttribute="trailing" id="tef-Bw-W3I"/>
+                            <constraint firstAttribute="bottom" secondItem="V9V-qU-Hyg" secondAttribute="bottom" id="wv8-Pq-5Yd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="55G-rb-btw"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31O-Zm-xaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="37"/>
+            <point key="canvasLocation" x="173.59999999999999" y="36.945812807881772"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Get Started Aysi" width="220" height="118"/>
+        <image name="Get Started Background" width="750" height="1624"/>
+        <image name="Get Started Line" width="750" height="388"/>
+        <image name="Membantu Anda menjag" width="586" height="98"/>
+        <image name="ayo mulai" width="606" height="106"/>
+        <image name="maternity" width="268" height="268"/>
+        <image name="tambah akun" width="606" height="106"/>
+    </resources>
 </document>

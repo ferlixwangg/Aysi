@@ -62,7 +62,7 @@ class InitialRegisterViewController: UIViewController {
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-        self.view.layer.add(transition, forKey: kCATransition)
+        self.view.window?.layer.add(transition, forKey: kCATransition)
         present(vc, animated: false, completion: nil)
     }
     
@@ -92,7 +92,7 @@ class InitialRegisterViewController: UIViewController {
         }
         
         guard let password = passwordField.text, password != "" else {
-            let alertController = UIAlertController(title: "Eror", message: "Masukkan password Anda", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Eror", message: "Masukkan kata sandi Anda", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
@@ -179,8 +179,6 @@ class InitialRegisterViewController: UIViewController {
     
     // MARK: - SIgn Up Page
     @IBAction func buatButtonPressed() {
-        moveToDataBayiPage()
-        
         guard let name = nameSignUpField.text, name != "" else {
             let alertController = UIAlertController(title: "Eror", message: "Masukkan nama Anda", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

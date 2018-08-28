@@ -29,6 +29,7 @@
 		BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA521328FE8001581F1 /* HomeViewController.swift */; };
 		BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */; };
 		BAC38C5621350C95007A2F91 /* GetStarted.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC38C5521350C95007A2F91 /* GetStarted.storyboard */; };
+		BAC38C582135361E007A2F91 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C572135361E007A2F91 /* GetStartedViewController.swift */; };
 		BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */; };
 		BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */; };
 		BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B52134801400B81C69 /* ContentDetailViewController.swift */; };
@@ -61,6 +62,7 @@
 		BAB59CA521328FE8001581F1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialRegisterViewController.swift; sourceTree = "<group>"; };
 		BAC38C5521350C95007A2F91 /* GetStarted.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStarted.storyboard; sourceTree = "<group>"; };
+		BAC38C572135361E007A2F91 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B52134801400B81C69 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		BAA4B0492122C67D001BE550 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BAC38C572135361E007A2F91 /* GetStartedViewController.swift */,
 				BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */,
 				BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */,
 				BAB59CA521328FE8001581F1 /* HomeViewController.swift */,
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC38C582135361E007A2F91 /* GetStartedViewController.swift in Sources */,
 				89DD63722132B3530038DC5E /* AccountSettingsTableViewController.swift in Sources */,
 				BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */,
 				BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */,

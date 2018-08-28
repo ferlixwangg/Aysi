@@ -77,16 +77,19 @@ class DataBayiViewController: UIViewController {
             "dob": dobFinal
         ]
         
-        self.ref.child("child").child((Auth.auth().currentUser?.uid)!).updateChildValues(babyData) {
-            (error:Error?, ref:DatabaseReference) in
-            if let error = error {
-                print("Data could not be saved: \(error.localizedDescription).")
-            } else {
-                print("Data saved successfully!")
-                UserDefaults.standard.set(babyData, forKey: "BabyData")
-                self.moveToHomePage()
+        UserDefaults.standard.set(babyData, forKey: "BabyData")
+        
+        if Auth.auth().currentUser != nil {
+            self.ref.child("child").child((Auth.auth().currentUser?.uid)!).updateChildValues(babyData) {
+                (error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error.localizedDescription).")
+                } else {
+                    print("Data saved successfully!")
+                }
             }
         }
+        self.moveToHomePage()
     }
     
     func moveToHomePage() {
