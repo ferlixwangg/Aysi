@@ -29,7 +29,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
     var notifTime = String()
-    var dob = String()
+    var dob: String?
     var gender = String()
     var notifMaker = NotificationController()
     
@@ -41,14 +41,94 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         }
     }
     
+    @IBAction func contentNotifSwitch(_ sender: UISwitch) {
+        //alert for notif permission
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+            }
+            else {
+                let alertController = UIAlertController(title: "Tidak bisa membuat notifikasi!", message: "Aplikasi tidak mempunyai izin membuat notifikasi. Tolong berikan izin di setting jika ingin mendapatkan notifikasi.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: { (completion) in
+                    self.contentNotifSwitchOutlet.setOn(false, animated: true)
+                })
+                alertController.addAction(defaultAction)
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    @IBAction func graphNotifSwitch(_ sender: UISwitch) {
+        //alert for notif permission
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+            }
+            else {
+                let alertController = UIAlertController(title: "Tidak bisa membuat notifikasi!", message: "Aplikasi tidak mempunyai izin membuat notifikasi. Tolong berikan izin di setting jika ingin mendapatkan notifikasi.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: { (completion) in
+                    self.graphNotifSwitchOutlet.setOn(false, animated: true)
+                })
+                alertController.addAction(defaultAction)
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    @IBAction func weekdayNotifSwitch(_ sender: UISwitch) {
+        //alert for notif permission
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+            }
+            else {
+                
+                let alertController = UIAlertController(title: "Tidak bisa membuat notifikasi!", message: "Aplikasi tidak mempunyai izin membuat notifikasi. Tolong berikan izin di setting jika ingin mendapatkan notifikasi.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: { (completion) in
+                    self.weekdayNotifSwitchOutlet.setOn(false, animated: true)
+                })
+                alertController.addAction(defaultAction)
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    @IBAction func weekendNotifSwitch(_ sender: UISwitch) {
+        //alert for notif permission
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+            }
+            else {
+                    let alertController = UIAlertController(title: "Tidak bisa membuat notifikasi!", message: "Aplikasi tidak mempunyai izin membuat notifikasi. Tolong berikan izin di setting jika ingin mendapatkan notifikasi.", preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: { (completion) in
+                        self.weekendNotifSwitchOutlet.setOn(false, animated: true)
+                    })
+                    alertController.addAction(defaultAction)
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    
+    
+    
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
         
-        guard let childName = babyNameTextField.text else { return }
+        guard let childName = babyNameTextField.text, childName != "" else {
+            let alertController = UIAlertController(title: "Eror", message: "Masukkan nama bayi Anda", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         let babyData = [
             "childName" : childName,
             "gender" : gender,
             "dob" : dob
         ]
+        //If Logged in
         if Auth.auth().currentUser != nil {
             ref?.child("child").child((Auth.auth().currentUser?.uid)!).updateChildValues(babyData) {
                 (error:Error?, ref:DatabaseReference) in
@@ -57,37 +137,37 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
                 } else {
                     print("Data saved successfully!")
                     UserDefaults.standard.set(babyData, forKey: "BabyData")
+                    let alertController = UIAlertController(title: "Sukses!", message: "Data telah tersimpan.", preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    DispatchQueue.main.async {
+                        self.present(alertController, animated: true, completion: nil)
+                    }
                 }
             }
-        } else {
+        } else { //Not Logged in
             UserDefaults.standard.set(babyData, forKey: "BabyData")
         }
-        
+        //removing notifs
         notifMaker.removeCallNotifsWeekends()
         notifMaker.removeContentNotifs()
         notifMaker.removeVallNotifsWeekdays()
         notifMaker.removeChartNotifs()
-
+        //setting trigger time for notifs
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
         formatter.locale = Locale(identifier: "id")
-        print("dob is : \(dob)")
-        let bDay = formatter.date(from: "\(dob) 20:00")!
-        
-        UserDefaults.standard.set(contentNotifSwitchOutlet.isOn, forKey: "contentNotif")
-        UserDefaults.standard.set(graphNotifSwitchOutlet.isOn, forKey: "graphNotif")
-        UserDefaults.standard.set(weekdayNotifSwitchOutlet.isOn, forKey: "weekdayNotif")
-        UserDefaults.standard.set(weekendNotifSwitchOutlet.isOn, forKey: "weekendNotif")
-        UserDefaults.standard.set(notifTime, forKey: "callNotifTime")
+        let bDay = formatter.date(from: "\(dob!) 20:00")! //notif time is set here
+        //making notifs for content
         if contentNotifSwitchOutlet.isOn == true {
             notifMaker.setContentNotifs(oriDay: bDay, babyName: childName)
         }
-        
-        let bDay2 = formatter.date(from: "\(dob) 20:30")
+        //making notifs for chart
+        let bDay2 = formatter.date(from: "\(dob!) 20:30") //notif time is set here
         if graphNotifSwitchOutlet.isOn == true {
             notifMaker.repeatingChartNotification(at: bDay2!, babyName: childName)
         }
-        
+        //separating the hour and minute from notif time for call wife notif
         let notifTimeArr = notifTime.components(separatedBy: ":")
         
         let hour = Int(notifTimeArr[0])
@@ -95,20 +175,27 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         let date = Date()
         let calendar = Calendar.current
         let year = calendar.component(.year, from: date)
-        
+        //weekday notifs 2-6 is monday to friday
         if weekdayNotifSwitchOutlet.isOn == true {
             notifMaker.setCallNotifications(days: [2,3,4,5,6], hour: hour!, minute: minute!, year: year, babyName: childName)
         }
+        //weekend notifs 1 and 7 is saturday and sunday
         if weekendNotifSwitchOutlet.isOn == true {
             notifMaker.setCallNotifications(days: [1,7], hour: hour!, minute: minute!, year: year, babyName: childName)
         }
+        //setting userdefaults for switch states
+        UserDefaults.standard.set(contentNotifSwitchOutlet.isOn, forKey: "contentNotif")
+        UserDefaults.standard.set(graphNotifSwitchOutlet.isOn, forKey: "graphNotif")
+        UserDefaults.standard.set(weekdayNotifSwitchOutlet.isOn, forKey: "weekdayNotif")
+        UserDefaults.standard.set(weekendNotifSwitchOutlet.isOn, forKey: "weekendNotif")
+        UserDefaults.standard.set(notifTime, forKey: "callNotifTime")
     }
-    
+    //hidden button if not logged in
     @IBAction func masukAkunBtn(_ sender: UIButton) {
         let vc = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
         present(vc, animated: true, completion: nil)
     }
-    
+    //sign out
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 3 && Auth.auth().currentUser != nil{
             let vc = UIStoryboard(name: "InitialRegister", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
@@ -133,7 +220,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         self.userNameTextField.delegate = self
         self.babyNameTextField.delegate = self
     }
-    
+    //return to remove keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -141,7 +228,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
     
     //loadSettingsFromUserDefaults
     private func loadSettings(){
-        
+        //check if user is logged in for sign in button
         if Auth.auth().currentUser == nil{
             masukAkunOutlet.isHidden = false
             masukAkunOutlet.isEnabled = true
@@ -155,7 +242,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             userNameTextField.text = Auth.auth().currentUser?.displayName
             emailTextField.text = Auth.auth().currentUser?.email
         }
-        
+            //loading baby data from userDefaults
             let babyData = UserDefaults.standard.dictionary(forKey: "BabyData")
         babyNameTextField.text = babyData?["childName"] as? String
             gender = babyData?["gender"] as! String
@@ -165,41 +252,55 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
                 babyGender.selectedSegmentIndex = 0
             }
             let formatter = DateFormatter()
+            formatter.locale = Locale(identifier: "id")
             formatter.dateFormat = "dd-MM-yyyy"
             let dateConvert = formatter.date(from: babyData?["dob"] as! String)
+            datePicker.date = dateConvert!
             formatter.dateFormat = "dd MMMM yyyy"
             let dateDisplay = formatter.string(from: dateConvert!)
             tanggalLahirField.text = dateDisplay
-            dob = babyData?["dob"] as! String
+        dob = (babyData?["dob"] as! String)
         
         //setting switch & field states
         if UserDefaults.standard.object(forKey: "callNotifTime") != nil {
             notifTimeField.text = UserDefaults.standard.string(forKey: "callNotifTime")
             notifTime = notifTimeField.text!
+            formatter.dateFormat = "HH:mm"
+            if let time = formatter.date(from: notifTime) {
+                timePicker.date = time
+            }
         } else {
             notifTimeField.text = "12:00"
             UserDefaults.standard.set("12:00", forKey: "callNotifTime")
             notifTime = "12:00"
+            formatter.dateFormat = "HH:mm"
+            if let time = formatter.date(from: notifTime) {
+                timePicker.date = time
+            }
         }
         if UserDefaults.standard.object(forKey: "contentNotif") != nil {
             contentNotifSwitchOutlet.setOn(UserDefaults.standard.bool(forKey: "contentNotif"), animated: false)
         } else {
             UserDefaults.standard.set(false, forKey: "contentNotif")
+            contentNotifSwitchOutlet.setOn(false, animated: false)
         }
         if UserDefaults.standard.object(forKey: "graphNotif") != nil {
             graphNotifSwitchOutlet.setOn(UserDefaults.standard.bool(forKey: "graphNotif"), animated: false)
         } else {
             UserDefaults.standard.set(false, forKey: "graphNotif")
+            graphNotifSwitchOutlet.setOn(false, animated: false)
         }
         if UserDefaults.standard.object(forKey: "weekdayNotif") != nil {
             weekdayNotifSwitchOutlet.setOn(UserDefaults.standard.bool(forKey: "weekdayNotif"), animated: false)
         } else {
             UserDefaults.standard.set(false, forKey: "weekdayNotif")
+            weekdayNotifSwitchOutlet.setOn(false, animated: false)
         }
         if UserDefaults.standard.object(forKey: "weekendNotif") != nil {
             weekendNotifSwitchOutlet.setOn(UserDefaults.standard.bool(forKey: "weekendNotif"), animated: false)
         } else {
             UserDefaults.standard.set(false, forKey: "weekendNotif")
+            weekendNotifSwitchOutlet.setOn(false, animated: false)
         }
     }
 
@@ -276,7 +377,7 @@ extension AccountSettingsTableViewController {
         formatter.locale = Locale(identifier: "id")
         dob = formatter.string(from: datePicker.date)
         formatter.dateFormat = "dd-MM-yyyy"
-        let dateConvert = formatter.date(from: dob)
+        let dateConvert = formatter.date(from: dob!)
         formatter.dateFormat = "dd MMMM yyyy"
         let dateDisplay = formatter.string(from: dateConvert!)
         

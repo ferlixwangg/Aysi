@@ -298,6 +298,10 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1t-y1-mQe">
                                                     <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+                                                    <color key="onTintColor" red="0.074509803920000006" green="0.27058823529999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="contentNotifSwitch:" destination="3VI-zM-aa1" eventType="valueChanged" id="ig0-gt-vQF"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -330,8 +334,12 @@
                                                     <color key="textColor" red="0.074509803920000006" green="0.27058823529999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0D-4f-lSx">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P0D-4f-lSx">
                                                     <rect key="frame" x="311" y="6" width="51" height="31"/>
+                                                    <color key="onTintColor" red="0.074509803920000006" green="0.27058823529999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="graphNotifSwitch:" destination="3VI-zM-aa1" eventType="valueChanged" id="Znr-4M-ICm"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -415,6 +423,10 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-vw-NG9">
                                                     <rect key="frame" x="311" y="6" width="51" height="31"/>
+                                                    <color key="onTintColor" red="0.074509803920000006" green="0.27058823529999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="weekdayNotifSwitch:" destination="3VI-zM-aa1" eventType="valueChanged" id="GgD-Q8-MtT"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekdays" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da8-6i-AkY">
                                                     <rect key="frame" x="86" y="13" width="70" height="18"/>
@@ -440,6 +452,10 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-iG-OmH">
                                                     <rect key="frame" x="311" y="6" width="51" height="31"/>
+                                                    <color key="onTintColor" red="0.074509803920000006" green="0.27058823529999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="weekendNotifSwitch:" destination="3VI-zM-aa1" eventType="valueChanged" id="gKw-di-buy"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBA-lT-tUq">
                                                     <rect key="frame" x="86" y="13" width="72" height="18"/>
