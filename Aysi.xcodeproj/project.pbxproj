@@ -28,6 +28,7 @@
 		BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */; };
 		BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA521328FE8001581F1 /* HomeViewController.swift */; };
 		BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */; };
+		BAC38C5621350C95007A2F91 /* GetStarted.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC38C5521350C95007A2F91 /* GetStarted.storyboard */; };
 		BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */; };
 		BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */; };
 		BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B52134801400B81C69 /* ContentDetailViewController.swift */; };
@@ -59,6 +60,7 @@
 		BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBayiViewController.swift; sourceTree = "<group>"; };
 		BAB59CA521328FE8001581F1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialRegisterViewController.swift; sourceTree = "<group>"; };
+		BAC38C5521350C95007A2F91 /* GetStarted.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStarted.storyboard; sourceTree = "<group>"; };
 		BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B52134801400B81C69 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
@@ -135,11 +137,12 @@
 		BAA4B0482122C679001BE550 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89DD636F2132AE5C0038DC5E /* AccountSettings.storyboard */,
+				BAC38C5521350C95007A2F91 /* GetStarted.storyboard */,
 				BAB59CA021328FAB001581F1 /* InitialRegister.storyboard */,
 				BAB59CA121328FAB001581F1 /* DataBayi.storyboard */,
 				BAA4B0352122C5E4001BE550 /* Main.storyboard */,
 				BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */,
+				89DD636F2132AE5C0038DC5E /* AccountSettings.storyboard */,
 				BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */,
 				BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */,
 				BA9D3A702122CB1D000BE8A4 /* MedicalRecord.storyboard */,
@@ -245,6 +248,7 @@
 				BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */,
 				BA9D3A712122CB1D000BE8A4 /* MedicalRecord.storyboard in Resources */,
 				BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */,
+				BAC38C5621350C95007A2F91 /* GetStarted.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
