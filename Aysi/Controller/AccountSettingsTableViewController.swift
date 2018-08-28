@@ -120,7 +120,9 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             let alertController = UIAlertController(title: "Eror", message: "Masukkan nama bayi Anda", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
             return
         }
         let babyData = [
