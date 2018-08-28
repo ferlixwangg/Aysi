@@ -234,11 +234,13 @@
             </objects>
             <point key="canvasLocation" x="1941.5999999999999" y="125.61576354679804"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="z6f-Vj-GtO">
             <objects>
                 <navigationController storyboardIdentifier="homeNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="h1l-c0-MPS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="qOo-NJ-sth"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="home" id="qOo-NJ-sth">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wUD-KH-FfW">
@@ -262,5 +264,6 @@
         <image name="SI BELAHAN HATI" width="292" height="28"/>
         <image name="SI BUAH HATI" width="228" height="28"/>
         <image name="Tahukah Anda" width="626" height="300"/>
+        <image name="home" width="128" height="128"/>
     </resources>
 </document>
