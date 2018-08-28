@@ -18,6 +18,30 @@
             </objects>
             <point key="canvasLocation" x="2617" y="126"/>
         </scene>
+        <!--Content Detail View Controller-->
+        <scene sceneID="oe4-Bg-zio">
+            <objects>
+                <viewController storyboardIdentifier="contentDetailVC" hidesBottomBarWhenPushed="YES" id="Ckw-Bd-zov" customClass="ContentDetailViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFx-72-PKc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4e-8H-QjN">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OtE-iS-8Cb"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentDetailImage" destination="M4e-8H-QjN" id="vPE-YD-JxS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saP-uJ-guL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768.8000000000002" y="820.93596059113304"/>
+        </scene>
         <!--Tips Page View Controller-->
         <scene sceneID="hu1-9y-UdF">
             <objects>
@@ -99,13 +123,22 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2tN-Bh-2pW">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="babyCell" id="2tN-Bh-2pW" customClass="BabyCollectionViewCell" customModule="Aysi" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o10-5f-R2h">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
                                                         </view>
+                                                        <connections>
+                                                            <outlet property="imageContent" destination="o10-5f-R2h" id="liD-Hp-CAE"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -120,13 +153,22 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KDd-Lh-vQV">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="wifeCell" id="KDd-Lh-vQV" customClass="WifeCollectionViewCell" customModule="Aysi" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrH-AZ-SGh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
                                                         </view>
+                                                        <connections>
+                                                            <outlet property="imageContent" destination="mrH-AZ-SGh" id="fBt-Kn-8bg"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -181,10 +223,13 @@
                     <navigationItem key="navigationItem" id="Jnl-pl-82g"/>
                     <size key="freeformSize" width="375" height="990"/>
                     <connections>
+                        <outlet property="babyCollectionView" destination="mJ5-2I-lIj" id="Fr9-MR-CNb"/>
                         <outlet property="pageControl" destination="Whu-sA-XGd" id="Uef-Kc-rEg"/>
                         <outlet property="pageScrollView" destination="Aiy-XL-ucW" id="QT6-Xt-FKG"/>
                         <outlet property="tipsContainerView" destination="qtA-9j-5nb" id="dEa-TQ-Txk"/>
+                        <outlet property="wifeCollectionView" destination="e08-qM-LQN" id="BKm-rC-Ohl"/>
                         <segue destination="bfW-Fj-lvM" kind="show" identifier="homeToAccountSetting" id="Vxg-vm-SRe"/>
+                        <segue destination="Ckw-Bd-zov" kind="show" identifier="homeToContentDetail" id="mkH-Po-jYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X19-Dq-rK4" userLabel="First Responder" sceneMemberID="firstResponder"/>

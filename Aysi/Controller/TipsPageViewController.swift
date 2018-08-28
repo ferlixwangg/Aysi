@@ -18,8 +18,9 @@ class TipsPageViewController: UIPageViewController {
     // MARK: - Variables
     weak var tipsDelegate: TipsDelegate?
     
-    let selectedTips = ["Tahukah Anda 1", "Tahukah Anda 2", "Tahukah Anda 3", "Tahukah Anda 4", "Tahukah Anda 5"]
-
+    var allTips = ["Tahukah Anda 1", "Tahukah Anda 2", "Tahukah Anda 3", "Tahukah Anda 4", "Tahukah Anda 5", "Tahukah Anda 6", "Tahukah Anda 7", "Tahukah Anda 8"]
+    var selectedTips = [String]()
+    
     lazy var vc : [TipsViewController] = {
         return [getItemController(0),getItemController(1),getItemController(2),getItemController(3),getItemController(4)]
         }() as! [TipsViewController]
@@ -27,6 +28,11 @@ class TipsPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        allTips.shuffle()
+        for i in 0...4{
+            selectedTips.append(allTips[i])
+        }
+        
         delegate = self
         dataSource = self
         
@@ -75,5 +81,30 @@ extension TipsPageViewController: UIPageViewControllerDataSource, UIPageViewCont
             let index = vc.index(of: firstViewController) {
             tipsDelegate?.tipsPageIndex(tipsPageViewController: self, didUpdatePageIndex: index)
         }
+    }
+}
+
+// Extension for shuffle
+extension MutableCollection {
+    /// Shuffles the contents of this collection.
+    mutating func shuffle() {
+        let c = count
+        guard c > 1 else { return }
+        
+        for (firstUnshuffled, unshuffledCount) in zip(indices, stride(from: c, to: 1, by: -1)) {
+            // Change `Int` in the next line to `IndexDistance` in < Swift 4.1
+            let d: Int = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
+            let i = index(firstUnshuffled, offsetBy: d)
+            swapAt(firstUnshuffled, i)
+        }
+    }
+}
+
+extension Sequence {
+    /// Returns an array with the contents of this sequence, shuffled.
+    func shuffled() -> [Element] {
+        var result = Array(self)
+        result.shuffle()
+        return result
     }
 }

@@ -15,14 +15,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var pageScrollView: UIScrollView!
     @IBOutlet weak var tipsContainerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var babyCollectionView: UICollectionView!
+    @IBOutlet weak var wifeCollectionView: UICollectionView!
     
     // MARK: - Variables
+    var clickedCollectionImage = UIImage()
+    let contentBaby = [#imageLiteral(resourceName: "Baby W1 - 1"), #imageLiteral(resourceName: "Baby W1 - 1"), #imageLiteral(resourceName: "Baby W1 - 1")]
+    let contentWife = [#imageLiteral(resourceName: "Baby W1 - 1"), #imageLiteral(resourceName: "Baby W1 - 1"), #imageLiteral(resourceName: "Baby W1 - 1")]
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavBarItems()
+        babyCollectionView.delegate = self
+        babyCollectionView.dataSource = self
+        wifeCollectionView.delegate = self
+        wifeCollectionView.dataSource = self
         
         // Transparent Nav Bar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -44,13 +53,17 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
     // MARK: - Functions
     func setupNavBarItems() {
         let navBarWidth = self.navigationController?.navigationBar.frame.width
         let navBarButtonViewWidth = (navBarWidth! - 140) / 2
         
         // Nav Bar Title
-        let imageView = UIImageView(image: UIImage(named: "Settings"))
+        let imageView = UIImageView(image: UIImage(named: "BULAN 6"))
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         let titleView = UIView(frame: CGRect(x: 10, y: 0, width: 90, height: 20))
         imageView.frame = titleView.bounds
@@ -93,6 +106,8 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tipsPageViewController = segue.destination as? TipsPageViewController {
             tipsPageViewController.tipsDelegate = self
+        } else if let contentDetailViewController = segue.destination as? ContentDetailViewController {
+            contentDetailViewController.contentObtained = clickedCollectionImage
         }
     }
     
@@ -122,5 +137,40 @@ extension HomeViewController: TipsDelegate {
     
     func tipsPageIndex(tipsPageViewController: TipsPageViewController, didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.babyCollectionView {
+            return contentBaby.count
+        } else if collectionView == self.wifeCollectionView {
+            return contentWife.count
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.babyCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "babyCell", for: indexPath) as? BabyCollectionViewCell
+            
+            cell?.imageContent.image = contentBaby[indexPath.row]
+            return cell!
+        } else if collectionView == self.wifeCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "wifeCell", for: indexPath) as? WifeCollectionViewCell
+            
+            cell?.imageContent.image = contentWife[indexPath.row]
+            return cell!
+        }
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.babyCollectionView{
+            clickedCollectionImage = contentBaby[indexPath.row]
+        } else if collectionView == self.wifeCollectionView {
+            clickedCollectionImage = contentWife[indexPath.row]
+        }
+        performSegue(withIdentifier: "homeToContentDetail", sender: self)
     }
 }
