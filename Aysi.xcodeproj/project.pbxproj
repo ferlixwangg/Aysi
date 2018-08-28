@@ -12,6 +12,8 @@
 		89DD63742132D22B0038DC5E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD63732132D22B0038DC5E /* NotificationController.swift */; };
 		9708BDB3DA2AD867CE3FEBD5 /* Pods_Aysi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */; };
 		BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */; };
+		BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */; };
+		BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C8FAA21342161004F395D /* TipsViewController.swift */; };
 		BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */; };
 		BA9D3A6D2122CA6D000BE8A4 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */; };
 		BA9D3A6F2122CB0A000BE8A4 /* Immunization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */; };
@@ -26,6 +28,9 @@
 		BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */; };
 		BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA521328FE8001581F1 /* HomeViewController.swift */; };
 		BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */; };
+		BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */; };
+		BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */; };
+		BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B52134801400B81C69 /* ContentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,8 @@
 		89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsTableViewController.swift; sourceTree = "<group>"; };
 		89DD63732132D22B0038DC5E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
+		BA7C8FAA21342161004F395D /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chart.storyboard; sourceTree = "<group>"; };
 		BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Immunization.storyboard; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBayiViewController.swift; sourceTree = "<group>"; };
 		BAB59CA521328FE8001581F1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialRegisterViewController.swift; sourceTree = "<group>"; };
+		BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAC630B52134801400B81C69 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +154,11 @@
 				BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */,
 				BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */,
 				BAB59CA521328FE8001581F1 /* HomeViewController.swift */,
+				BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */,
+				BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */,
+				BAC630B52134801400B81C69 /* ContentDetailViewController.swift */,
+				BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */,
+				BA7C8FAA21342161004F395D /* TipsViewController.swift */,
 				89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */,
 				89DD63732132D22B0038DC5E /* NotificationController.swift */,
 			);
@@ -287,8 +302,13 @@
 			files = (
 				89DD63722132B3530038DC5E /* AccountSettingsTableViewController.swift in Sources */,
 				BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */,
+				BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */,
+				BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */,
+				BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */,
 				BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */,
+				BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */,
 				89DD63742132D22B0038DC5E /* NotificationController.swift in Sources */,
+				BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */,
 				BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */,
 				BAA4B0322122C5E4001BE550 /* AppDelegate.swift in Sources */,
 				BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */,
