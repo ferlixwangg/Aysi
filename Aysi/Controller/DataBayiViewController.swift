@@ -15,7 +15,7 @@ class DataBayiViewController: UIViewController {
     @IBOutlet weak var namaBayiField: UITextField!
     @IBOutlet weak var jenisKelaminField: UITextField!
     @IBOutlet weak var tanggalLahirField: UITextField!
-    
+    @IBOutlet weak var backButton: UIButton!
     
     // MARK: - Variables
     let genderPicker = UIPickerView()
@@ -91,6 +91,17 @@ class DataBayiViewController: UIViewController {
         }
         self.moveToHomePage()
     }
+    
+    @IBAction func backButtonPressed() {
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func moveToHomePage() {
         let tabVC = UITabBarController()
@@ -169,21 +180,6 @@ extension DataBayiViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         jenisKelaminField.text = genderList[row]
         pickerMoved = true
     }
-    
-//     Set the style for each row
-//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-//        var label = UILabel()
-//
-//        if let view = view as? UILabel{
-//            label = view
-//        }
-//
-//        label.textColor = UIColor.init(displayP3Red: 27/255, green: 69/255, blue: 91/255, alpha: 1.0)
-//        label.textAlignment = .center
-//        label.font = UIFont(name: "AvenirNext-Medium", size: 17)
-//        label.text = genderList[row]
-//        return label
-//    }
 }
 
 

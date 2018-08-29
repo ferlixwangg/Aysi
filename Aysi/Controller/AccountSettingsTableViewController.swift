@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import UserNotifications
 
-class AccountSettingsTableViewController: UITableViewController, UITextFieldDelegate {
+class AccountSettingsTableViewController: UITableViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var babyGender: UISegmentedControl!
     @IBOutlet weak var babyNameTextField: UITextField!
@@ -256,6 +256,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         masukAkunOutlet.layer.borderWidth = 1
         masukAkunOutlet.layer.borderColor = UIColor.init(displayP3Red: 61/255, green: 117/255, blue: 143/255, alpha: 1.0).cgColor
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
     }
     
     //return to remove keyboard
@@ -371,7 +372,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         backButton.addTarget(self, action: #selector(AccountSettingsTableViewController.backButtonPressed), for: .touchUpInside)
         let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 32))
         backButton.contentMode = .scaleAspectFit
-        backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 20, height: 22)
+        backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 14, height: 22)
         customViewLeft.addSubview(backButton)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)

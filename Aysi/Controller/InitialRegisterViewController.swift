@@ -17,6 +17,7 @@ class InitialRegisterViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var signUpView: UIView!
+    @IBOutlet weak var backButton: UIButton!
     
     // Sign Up Outlets
     @IBOutlet weak var nameSignUpField: UITextField!
@@ -166,6 +167,7 @@ class InitialRegisterViewController: UIViewController {
     }
     
     @IBAction func daftarButtonPressed() {
+        self.backButton.isHidden = true
         self.signUpView.frame.origin.x = UIScreen.main.bounds.width
         
         UIView.animate(withDuration: 0.5) {
@@ -176,6 +178,16 @@ class InitialRegisterViewController: UIViewController {
         self.signUpView.isHidden = false
     }
     
+    
+    @IBAction func backButtonPressed() {
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - SIgn Up Page
     @IBAction func buatButtonPressed() {
@@ -234,7 +246,6 @@ class InitialRegisterViewController: UIViewController {
                     }
                 })
             } else {
-
                 let errorCode = error! as NSError
                 var errorMessage = String()
 
@@ -264,6 +275,7 @@ class InitialRegisterViewController: UIViewController {
     }
     
     @IBAction func masukSignUpButtonPressed() {
+        self.backButton.isHidden = false
         self.loginView.frame.origin.x = 0 - self.loginView.frame.width
         UIView.animate(withDuration: 0.5) {
             self.signUpView.frame.origin.x = UIScreen.main.bounds.width

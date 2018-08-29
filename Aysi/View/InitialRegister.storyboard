@@ -388,6 +388,14 @@
                                     <constraint firstItem="P8x-SR-gCG" firstAttribute="centerY" secondItem="3mZ-d7-s4A" secondAttribute="centerY" id="zbl-8s-gzq"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHS-jl-3GO">
+                                <rect key="frame" x="16" y="196" width="22" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="back Button colorful"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="YSb-n9-Hdi" eventType="touchUpInside" id="PUb-o6-GvW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -404,6 +412,7 @@
                         <viewLayoutGuide key="safeArea" id="FLA-vo-Nyh"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="nHS-jl-3GO" id="E7J-gE-0Bg"/>
                         <outlet property="confirmPasswordField" destination="3rk-iL-oqt" id="dAF-un-yxX"/>
                         <outlet property="emailField" destination="Bl5-Dm-tfx" id="iCd-5A-jSS"/>
                         <outlet property="emailSignUpField" destination="syQ-hr-icR" id="r5r-5y-cgs"/>
@@ -417,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7I-J1-u2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-502" y="134"/>
+            <point key="canvasLocation" x="-503.19999999999999" y="133.74384236453201"/>
         </scene>
         <!--Home-->
         <scene sceneID="aeC-LL-dQ8">
@@ -434,6 +443,7 @@
         <image name="Header-1" width="750" height="388"/>
         <image name="Rectangle" width="476" height="64"/>
         <image name="avatar" width="22" height="26"/>
+        <image name="back Button colorful" width="40" height="64"/>
         <image name="envelope" width="22" height="18"/>
         <image name="masuk button" width="184" height="80"/>
         <image name="padlock" width="20" height="24"/>

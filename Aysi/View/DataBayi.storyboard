@@ -165,6 +165,14 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="dzV-2k-gaR"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijf-La-zgm">
+                                <rect key="frame" x="16" y="159" width="22" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="back Button colorful"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="gDd-XX-3Rb" eventType="touchUpInside" id="jgt-iV-K7m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -179,6 +187,7 @@
                         <viewLayoutGuide key="safeArea" id="D5d-71-ZMG"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="ijf-La-zgm" id="Djk-qR-6BH"/>
                         <outlet property="jenisKelaminField" destination="Qy4-9R-59V" id="lqR-Wo-r6m"/>
                         <outlet property="namaBayiField" destination="1YN-03-um4" id="ckj-AK-X1R"/>
                         <outlet property="tanggalLahirField" destination="UoX-KP-GBF" id="d9N-g4-TY6"/>
@@ -194,6 +203,7 @@
         <image name="Daftar Button" width="184" height="80"/>
         <image name="Header-2" width="750" height="314"/>
         <image name="Rectangle" width="476" height="64"/>
+        <image name="back Button colorful" width="40" height="64"/>
         <image name="boy" width="28" height="28"/>
         <image name="calendar" width="22" height="22"/>
         <image name="gender" width="28" height="28"/>
