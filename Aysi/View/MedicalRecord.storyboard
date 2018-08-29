@@ -40,7 +40,7 @@
         <scene sceneID="Cha-d1-EEv">
             <objects>
                 <navigationController storyboardIdentifier="medRecNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="Xl6-a6-Kdj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list" id="g1N-bV-pFz">
+                    <tabBarItem key="tabBarItem" title="" image="medical-record" selectedImage="medical-recordShadow" id="g1N-bV-pFz">
                         <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -60,6 +60,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list" width="33" height="27"/>
+        <image name="medical-record" width="30" height="30"/>
+        <image name="medical-recordShadow" width="36" height="36"/>
     </resources>
 </document>

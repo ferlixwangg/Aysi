@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lwg-tn-goQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="line-chart" id="PiC-Zf-fu3">
+                    <tabBarItem key="tabBarItem" title="" image="line-chart" selectedImage="line-chartShadow" id="PiC-Zf-fu3">
                         <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -40,6 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="line-chart" width="32" height="28"/>
+        <image name="line-chart" width="30" height="30"/>
+        <image name="line-chartShadow" width="36" height="36"/>
     </resources>
 </document>

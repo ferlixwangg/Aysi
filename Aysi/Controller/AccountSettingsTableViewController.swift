@@ -363,7 +363,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         backButton.addTarget(self, action: #selector(AccountSettingsTableViewController.backButtonPressed), for: .touchUpInside)
         let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 32))
         backButton.contentMode = .scaleAspectFit
-        backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 13, height: 17)
+        backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 20, height: 22)
         customViewLeft.addSubview(backButton)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)

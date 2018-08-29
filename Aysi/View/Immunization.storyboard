@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q9o-w1-Xyf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="vaccine" id="T9R-FW-jw6">
+                    <tabBarItem key="tabBarItem" title="" image="anesthesia" selectedImage="anesthesiaShadow" id="T9R-FW-jw6">
                         <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="KE6-js-yBl"/>
@@ -41,6 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="vaccine" width="37" height="37"/>
+        <image name="anesthesia" width="32" height="32"/>
+        <image name="anesthesiaShadow" width="38" height="38"/>
     </resources>
 </document>

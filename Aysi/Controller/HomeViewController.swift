@@ -179,7 +179,7 @@ class HomeViewController: UIViewController {
         // Nav Bar Title
         imageView = UIImageView(image: UIImage(named: "BULAN 6"))
         imageView.contentMode = UIViewContentMode.scaleAspectFit
-        let titleView = UIView(frame: CGRect(x: 10, y: 0, width: 90, height: 20))
+        let titleView = UIView(frame: CGRect(x: 10, y: -7, width: 90, height: 20))
         imageView.frame = titleView.bounds
         titleView.addSubview(imageView)
         
@@ -192,7 +192,7 @@ class HomeViewController: UIViewController {
         leftArrowButton.addTarget(self, action: #selector(HomeViewController.prevButtonPressed), for: .touchUpInside)
         let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: navBarButtonViewWidth, height: 32))
         leftArrowButton.contentMode = .scaleAspectFit
-        leftArrowButton.frame = CGRect(x: customViewLeft.frame.width-30, y: customViewLeft.frame.midY-10, width: 13, height: 17)
+        leftArrowButton.frame = CGRect(x: customViewLeft.frame.width-30, y: customViewLeft.frame.midY-10, width: 20, height: 22)
         customViewLeft.addSubview(leftArrowButton)
         
         // Right Arrow Button
@@ -208,8 +208,8 @@ class HomeViewController: UIViewController {
         settingButton.contentMode = .scaleAspectFit
         
         let customViewRight = UIView(frame: CGRect(x: 0, y: 0, width: navBarButtonViewWidth, height: 32))
-        rightArrowButton.frame = CGRect(x: 15, y: customViewRight.frame.midY-10, width: 13, height: 17)
-        settingButton.frame = CGRect(x: customViewRight.frame.width-20, y: customViewRight.frame.midY-10, width: 20, height: 20)
+        rightArrowButton.frame = CGRect(x: 15, y: customViewRight.frame.midY-10, width: 20, height: 22)
+        settingButton.frame = CGRect(x: customViewRight.frame.width-20, y: customViewRight.frame.midY-10, width: 24, height: 24)
         customViewRight.addSubview(rightArrowButton)
         customViewRight.addSubview(settingButton)
         

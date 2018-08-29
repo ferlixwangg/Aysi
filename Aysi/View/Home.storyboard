@@ -251,7 +251,7 @@
         <scene sceneID="z6f-Vj-GtO">
             <objects>
                 <navigationController storyboardIdentifier="homeNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="h1l-c0-MPS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home" id="qOo-NJ-sth">
+                    <tabBarItem key="tabBarItem" title="" image="homeNew" selectedImage="homeNewShadow" id="qOo-NJ-sth">
                         <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
@@ -278,6 +278,7 @@
         <image name="SI BELAHAN HATI" width="292" height="28"/>
         <image name="SI BUAH HATI" width="228" height="28"/>
         <image name="Tahukah Anda" width="626" height="300"/>
-        <image name="home" width="40" height="32"/>
+        <image name="homeNew" width="30" height="30"/>
+        <image name="homeNewShadow" width="36" height="36"/>
     </resources>
 </document>

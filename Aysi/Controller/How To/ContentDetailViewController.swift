@@ -41,9 +41,34 @@ class ContentDetailViewController: UIViewController {
         super.viewDidLoad()
         currentCategory = object.arrCategory[section]
         listOfHowToImages = object.contentDict[currentCategory]![row].contentImage
-        print(listOfHowToImages)
         categoryImage = object.contentDict[currentCategory]![row].category
         howToTitleImage = object.contentDict[currentCategory]![row].title
+        setupNavBarItems()
+        howToTitleImageView.image = UIImage(named: howToTitleImage)
+        howToTitleImageView.contentMode = .scaleAspectFit
+    }
+    
+    func setupNavBarItems() {
+        // Nav Bar Title
+        let imageView = UIImageView(image: UIImage(named: "\(currentCategory) Title"))
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        let titleView = UIView(frame: CGRect(x: 10, y: 0, width: 110, height: 26))
+        imageView.frame = titleView.bounds
+        titleView.addSubview(imageView)
+        
+        self.navigationItem.titleView = titleView
+        
+        // Nav bar buttons
+        // Left Arrow Button
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "backBtn"), for: .normal)
+        backButton.addTarget(self, action: #selector(ContentDetailViewController.backButtonPressed), for: .touchUpInside)
+        let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 32))
+        backButton.contentMode = .scaleAspectFit
+        backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 20, height: 22)
+        customViewLeft.addSubview(backButton)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,9 +79,8 @@ class ContentDetailViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func backButtonPressed() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 

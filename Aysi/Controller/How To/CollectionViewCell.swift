@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var gambarLabel: UILabel!
     @IBOutlet weak var daftarGambar: UIImageView!
     
 }
