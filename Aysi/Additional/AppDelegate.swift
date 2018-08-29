@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-//        try! Auth.auth().signOut()
-//        UserDefaults.standard.removeObject(forKey: "BabyData")
+        UserDefaults.standard.removeObject(forKey: "BabyData")
         var initialViewController: UIViewController!
         
         UIBarButtonItem.appearance().setTitleTextAttributes(

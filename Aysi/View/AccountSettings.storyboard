@@ -324,8 +324,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line-chart" translatesAutoresizingMaskIntoConstraints="NO" id="w60-gY-Gb0">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line-chart-notif" translatesAutoresizingMaskIntoConstraints="NO" id="w60-gY-Gb0">
                                                     <rect key="frame" x="20" y="12" width="20" height="20"/>
+                                                    <color key="tintColor" red="0.18823529411764706" green="0.36862745098039218" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="Iq3-oB-yQS"/>
                                                         <constraint firstAttribute="height" constant="20" id="eDc-VA-arw"/>
@@ -543,7 +544,7 @@
         <image name="copy-content" width="26" height="30"/>
         <image name="envelope" width="22" height="18"/>
         <image name="gender" width="28" height="28"/>
-        <image name="line-chart" width="32" height="28"/>
+        <image name="line-chart-notif" width="30" height="30"/>
         <image name="padlock" width="20" height="24"/>
         <image name="phone-call" width="32" height="32"/>
     </resources>
