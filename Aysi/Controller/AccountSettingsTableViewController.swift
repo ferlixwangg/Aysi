@@ -153,6 +153,12 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             }
         } else { //Not Logged in
             UserDefaults.standard.set(babyData, forKey: "BabyData")
+            let alertController = UIAlertController(title: "Sukses!", message: "Data telah tersimpan.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
         
         //removing notifs

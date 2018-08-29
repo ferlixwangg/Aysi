@@ -36,7 +36,7 @@
 		BAC38C602135DEC4007A2F91 /* MedicalRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C5F2135DEC4007A2F91 /* MedicalRecordViewController.swift */; };
 		BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */; };
 		BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */; };
-		BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B52134801400B81C69 /* ContentDetailViewController.swift */; };
+		BAC630B62134801400B81C69 /* HomeContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B52134801400B81C69 /* HomeContentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +73,7 @@
 		BAC38C5F2135DEC4007A2F91 /* MedicalRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordViewController.swift; sourceTree = "<group>"; };
 		BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifeCollectionViewCell.swift; sourceTree = "<group>"; };
-		BAC630B52134801400B81C69 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		BAC630B52134801400B81C69 /* HomeContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 				89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */,
 				BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */,
 				BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */,
-				BAC630B52134801400B81C69 /* ContentDetailViewController.swift */,
+				BAC630B52134801400B81C69 /* HomeContentDetailViewController.swift */,
 				BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */,
 				BA7C8FAA21342161004F395D /* TipsViewController.swift */,
 				89DD63732132D22B0038DC5E /* NotificationController.swift */,
@@ -325,7 +325,7 @@
 				89DD63722132B3530038DC5E /* AccountSettingsTableViewController.swift in Sources */,
 				BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */,
 				BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */,
-				BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */,
+				BAC630B62134801400B81C69 /* HomeContentDetailViewController.swift in Sources */,
 				BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */,
 				BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */,
 				BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */,

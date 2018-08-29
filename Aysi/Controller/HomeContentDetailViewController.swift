@@ -1,5 +1,5 @@
 //
-//  ContentDetailViewController.swift
+//  HomeContentDetailViewController.swift
 //  Aysi
 //
 //  Created by Ferlix Yanto Wang on 28/08/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContentDetailViewController: UIViewController {
+class HomeContentDetailViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var contentDetailImage: UIImageView!
@@ -40,7 +40,7 @@ class ContentDetailViewController: UIViewController {
         // Left Arrow Button
         let backButton = UIButton(type: .custom)
         backButton.setImage(UIImage(named: "backBtn"), for: .normal)
-        backButton.addTarget(self, action: #selector(ContentDetailViewController.backButtonPressed), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(HomeContentDetailViewController.backButtonPressed), for: .touchUpInside)
         let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 32))
         backButton.contentMode = .scaleAspectFit
         backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 13, height: 17)

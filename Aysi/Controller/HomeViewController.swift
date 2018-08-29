@@ -220,9 +220,9 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tipsPageViewController = segue.destination as? TipsPageViewController {
             tipsPageViewController.tipsDelegate = self
-        } else if let contentDetailViewController = segue.destination as? ContentDetailViewController {
-            contentDetailViewController.contentObtained = clickedCollectionImage
-            contentDetailViewController.navTitle = navTitle
+        } else if let HomeContentDetailViewController = segue.destination as? HomeContentDetailViewController {
+            HomeContentDetailViewController.contentObtained = clickedCollectionImage
+            HomeContentDetailViewController.navTitle = navTitle
         }
     }
     

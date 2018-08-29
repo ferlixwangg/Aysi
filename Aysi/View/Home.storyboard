@@ -18,10 +18,10 @@
             </objects>
             <point key="canvasLocation" x="2617" y="126"/>
         </scene>
-        <!--Content Detail View Controller-->
+        <!--Home Content Detail View Controller-->
         <scene sceneID="oe4-Bg-zio">
             <objects>
-                <viewController storyboardIdentifier="contentDetailVC" hidesBottomBarWhenPushed="YES" id="Ckw-Bd-zov" customClass="ContentDetailViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contentDetailVC" hidesBottomBarWhenPushed="YES" id="Ckw-Bd-zov" customClass="HomeContentDetailViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFx-72-PKc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="OtE-iS-8Cb"/>
                     </view>
                     <connections>
-                        <outlet property="contentDetailImage" destination="M4e-8H-QjN" id="vPE-YD-JxS"/>
+                        <outlet property="contentDetailImage" destination="M4e-8H-QjN" id="kIQ-ul-Ccz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saP-uJ-guL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="v9Z-so-5M2" firstAttribute="centerX" secondItem="ec5-uy-G9Y" secondAttribute="centerX" id="mth-le-MjH"/>
                             <constraint firstItem="v9Z-so-5M2" firstAttribute="top" secondItem="ec5-uy-G9Y" secondAttribute="top" constant="-45" id="y6f-NI-STa"/>
@@ -176,10 +176,6 @@
                                                 <rect key="frame" x="0.0" y="816" width="375" height="114"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HOW TO" translatesAutoresizingMaskIntoConstraints="NO" id="kqe-DQ-Y1u">
-                                                <rect key="frame" x="67" y="851" width="240" height="68"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <containerView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtA-9j-5nb">
                                                 <rect key="frame" x="26" y="39" width="322" height="123"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -191,6 +187,11 @@
                                                 <rect key="frame" x="173" y="135" width="29" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </pageControl>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh5-6K-yGf" userLabel="How To Button">
+                                                <rect key="frame" x="67" y="862" width="240" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="HOW TO"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
