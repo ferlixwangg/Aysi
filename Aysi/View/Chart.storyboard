@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chart-->
+        <!--Chart View Controller-->
         <scene sceneID="Gls-Am-QiX">
             <objects>
-                <viewController storyboardIdentifier="chartVC" id="gVI-CF-tFj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chartVC" id="gVI-CF-tFj" customClass="ChartViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3PY-Vq-0Z3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lwg-tn-goQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chart" id="PiC-Zf-fu3"/>
+                    <tabBarItem key="tabBarItem" title="" image="line-chart" id="PiC-Zf-fu3">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKe-OI-ck0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,4 +39,7 @@
             <point key="canvasLocation" x="124" y="184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="line-chart" width="32" height="28"/>
+    </resources>
 </document>

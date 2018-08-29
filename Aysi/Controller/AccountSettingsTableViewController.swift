@@ -223,6 +223,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        setupNavBarItems()
         self.ref = Database.database().reference()
         loadSettings()
         createDatePicker()
@@ -336,11 +337,34 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
     }
 
     private func setupNavBar() {
-            navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = false
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func setupNavBarItems() {
+        // Nav Bar Title
+        let imageView = UIImageView(image: UIImage(named: "Settings"))
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        let titleView = UIView(frame: CGRect(x: 10, y: 0, width: 90, height: 23))
+        imageView.frame = titleView.bounds
+        titleView.addSubview(imageView)
+        
+        self.navigationItem.titleView = titleView
+        
+        // Nav bar buttons
+        // Left Arrow Button
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "backBtn"), for: .normal)
+        backButton.addTarget(self, action: #selector(AccountSettingsTableViewController.backButtonPressed), for: .touchUpInside)
+        let customViewLeft = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 32))
+        backButton.contentMode = .scaleAspectFit
+        backButton.frame = CGRect(x: 10, y: customViewLeft.frame.midY-10, width: 13, height: 17)
+        customViewLeft.addSubview(backButton)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)
+    }
+    
+    @objc func backButtonPressed(){
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

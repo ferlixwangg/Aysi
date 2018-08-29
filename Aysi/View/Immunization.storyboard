@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Immunization-->
+        <!--Immunization View Controller-->
         <scene sceneID="OV9-3k-d88">
             <objects>
-                <viewController storyboardIdentifier="immunizationVC" id="m4w-jd-ntW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="immunizationVC" id="m4w-jd-ntW" customClass="ImmunizationViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RW6-ps-Ugm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q9o-w1-Xyf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Immunization" id="T9R-FW-jw6"/>
+                    <tabBarItem key="tabBarItem" title="" image="vaccine" id="T9R-FW-jw6">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="KE6-js-yBl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -38,4 +40,7 @@
             <point key="canvasLocation" x="805.60000000000002" y="100.49261083743843"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="vaccine" width="37" height="37"/>
+    </resources>
 </document>

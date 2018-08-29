@@ -31,6 +31,9 @@
 		BAC38C5621350C95007A2F91 /* GetStarted.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC38C5521350C95007A2F91 /* GetStarted.storyboard */; };
 		BAC38C582135361E007A2F91 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C572135361E007A2F91 /* GetStartedViewController.swift */; };
 		BAC38C5A21358155007A2F91 /* HomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C5921358155007A2F91 /* HomeContent.swift */; };
+		BAC38C5C2135DEAB007A2F91 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C5B2135DEAB007A2F91 /* ChartViewController.swift */; };
+		BAC38C5E2135DEB7007A2F91 /* ImmunizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C5D2135DEB7007A2F91 /* ImmunizationViewController.swift */; };
+		BAC38C602135DEC4007A2F91 /* MedicalRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC38C5F2135DEC4007A2F91 /* MedicalRecordViewController.swift */; };
 		BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */; };
 		BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */; };
 		BAC630B62134801400B81C69 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC630B52134801400B81C69 /* ContentDetailViewController.swift */; };
@@ -65,6 +68,9 @@
 		BAC38C5521350C95007A2F91 /* GetStarted.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStarted.storyboard; sourceTree = "<group>"; };
 		BAC38C572135361E007A2F91 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		BAC38C5921358155007A2F91 /* HomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeContent.swift; path = Aysi/Controller/HomeContent.swift; sourceTree = SOURCE_ROOT; };
+		BAC38C5B2135DEAB007A2F91 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		BAC38C5D2135DEB7007A2F91 /* ImmunizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmunizationViewController.swift; sourceTree = "<group>"; };
+		BAC38C5F2135DEC4007A2F91 /* MedicalRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordViewController.swift; sourceTree = "<group>"; };
 		BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAC630B52134801400B81C69 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
@@ -163,13 +169,16 @@
 				BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */,
 				BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */,
 				BAB59CA521328FE8001581F1 /* HomeViewController.swift */,
+				89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */,
 				BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */,
 				BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */,
 				BAC630B52134801400B81C69 /* ContentDetailViewController.swift */,
 				BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */,
 				BA7C8FAA21342161004F395D /* TipsViewController.swift */,
-				89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */,
 				89DD63732132D22B0038DC5E /* NotificationController.swift */,
+				BAC38C5B2135DEAB007A2F91 /* ChartViewController.swift */,
+				BAC38C5D2135DEB7007A2F91 /* ImmunizationViewController.swift */,
+				BAC38C5F2135DEC4007A2F91 /* MedicalRecordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC38C602135DEC4007A2F91 /* MedicalRecordViewController.swift in Sources */,
 				BAC38C5A21358155007A2F91 /* HomeContent.swift in Sources */,
 				BAC38C582135361E007A2F91 /* GetStartedViewController.swift in Sources */,
 				89DD63722132B3530038DC5E /* AccountSettingsTableViewController.swift in Sources */,
@@ -322,8 +332,10 @@
 				89DD63742132D22B0038DC5E /* NotificationController.swift in Sources */,
 				BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */,
 				BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */,
+				BAC38C5E2135DEB7007A2F91 /* ImmunizationViewController.swift in Sources */,
 				BAA4B0322122C5E4001BE550 /* AppDelegate.swift in Sources */,
 				BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */,
+				BAC38C5C2135DEAB007A2F91 /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

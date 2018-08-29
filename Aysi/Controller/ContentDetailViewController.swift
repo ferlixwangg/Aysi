@@ -28,7 +28,6 @@ class ContentDetailViewController: UIViewController {
     
     func setupNavBarItems() {
         // Nav Bar Title
-        print(navTitle)
         let imageView = UIImageView(image: UIImage(named: navTitle))
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         let titleView = UIView(frame: CGRect(x: 10, y: 0, width: 110, height: 25))

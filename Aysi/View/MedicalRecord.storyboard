@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Medical Record View Controller-->
         <scene sceneID="IQQ-Fd-u0n">
             <objects>
-                <viewController id="Amh-R7-DEr" sceneMemberID="viewController">
+                <viewController id="Amh-R7-DEr" customClass="MedicalRecordViewController" customModule="Aysi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XN2-Cx-h7P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,11 +36,13 @@
             </objects>
             <point key="canvasLocation" x="943.20000000000005" y="194.33497536945814"/>
         </scene>
-        <!--Medical Record-->
+        <!--Navigation Controller-->
         <scene sceneID="Cha-d1-EEv">
             <objects>
                 <navigationController storyboardIdentifier="medRecNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="Xl6-a6-Kdj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Medical Record" id="g1N-bV-pFz"/>
+                    <tabBarItem key="tabBarItem" title="" image="list" id="g1N-bV-pFz">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yBP-cp-4BP">
@@ -57,4 +59,7 @@
             <point key="canvasLocation" x="0.80000000000000004" y="194.33497536945814"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="33" height="27"/>
+    </resources>
 </document>
