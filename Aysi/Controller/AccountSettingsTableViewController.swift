@@ -225,6 +225,12 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             try! Auth.auth().signOut()
         }
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section==3 && Auth.auth().currentUser == nil{
+            return 0
+        }
+        return super.tableView(tableView, heightForRowAt: indexPath)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -263,7 +269,6 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
             masukAkunOutlet.isHidden = false
             masukAkunOutlet.isEnabled = true
             saveBtnOutlet.isEnabled = true
-            
         } else {
             masukAkunOutlet.isHidden = true
             masukAkunOutlet.isEnabled = false
