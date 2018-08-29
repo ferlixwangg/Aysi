@@ -104,7 +104,7 @@ class NotificationController {
         
         content.title = cTitle
         content.body = cBody
-        
+        content.sound = UNNotificationSound.default()
         //Trigger
         let a = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .timeZone, .calendar], from: notifTrigger)
         print(a)
@@ -152,8 +152,8 @@ class NotificationController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
         
         let content = UNMutableNotificationContent()
-        content.title = "call wife"
-        content.body = babyName
+        content.title = "Sudah telfon si belahan hati belum?"
+        content.body = "Jangan lupa telfon istri anda. Beberapa menit waktu anda menanyakan keadaan istri bisa membantu dan membuat istri senang!"
         content.sound = UNNotificationSound.default()
         
         let request = UNNotificationRequest(identifier: "callNotification\(day)", content: content, trigger: trigger)
@@ -189,6 +189,20 @@ class NotificationController {
                 print(triggerWeekly)
             }
         }
+    }
+    
+    func demoNotif(babyName: String) {
+        let content = UNMutableNotificationContent()
+        content.title = "Bulan ke-3 \(babyName)"
+        content.body = "\(babyName) sudah memasuki bulan ketiga! Ini hal-hal yang anda perlu tau!"
+        content.sound = UNNotificationSound.default()
+        content.categoryIdentifier = "notify-test"
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 15, repeats: false)
+        let request = UNNotificationRequest.init(identifier: "demoNotif", content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
     }
 }
 

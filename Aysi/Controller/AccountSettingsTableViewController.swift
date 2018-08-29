@@ -176,6 +176,8 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         //making notifs for content
         if contentNotifSwitchOutlet.isOn == true {
             notifMaker.setContentNotifs(oriDay: bDay, babyName: childName)
+            //DEMO NOTIF
+            notifMaker.demoNotif(babyName: childName)
         }
         
         //making notifs for chart
