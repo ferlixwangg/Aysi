@@ -21,6 +21,7 @@
 		BA7A91052136780400BDE154 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91032136780400BDE154 /* TableViewCell.swift */; };
 		BA7A91082136781C00BDE154 /* ContentImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91062136781B00BDE154 /* ContentImages.swift */; };
 		BA7A91092136781C00BDE154 /* HowToObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91072136781C00BDE154 /* HowToObject.swift */; };
+		BA7A910B2137355100BDE154 /* MedicalRecordInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A910A2137355100BDE154 /* MedicalRecordInitialViewController.swift */; };
 		BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */; };
 		BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C8FAA21342161004F395D /* TipsViewController.swift */; };
 		BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */; };
@@ -65,6 +66,7 @@
 		BA7A91032136780400BDE154 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BA7A91062136781B00BDE154 /* ContentImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentImages.swift; sourceTree = "<group>"; };
 		BA7A91072136781C00BDE154 /* HowToObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToObject.swift; sourceTree = "<group>"; };
+		BA7A910A2137355100BDE154 /* MedicalRecordInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordInitialViewController.swift; sourceTree = "<group>"; };
 		BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
 		BA7C8FAA21342161004F395D /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				89DD63732132D22B0038DC5E /* NotificationController.swift */,
 				BAC38C5B2135DEAB007A2F91 /* ChartViewController.swift */,
 				BAC38C5D2135DEB7007A2F91 /* ImmunizationViewController.swift */,
+				BA7A910A2137355100BDE154 /* MedicalRecordInitialViewController.swift */,
 				BAC38C5F2135DEC4007A2F91 /* MedicalRecordViewController.swift */,
 			);
 			path = Controller;
@@ -385,6 +388,7 @@
 				BA7A90FC2136776400BDE154 /* ContentDetailPageViewController.swift in Sources */,
 				BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */,
 				89DD63742132D22B0038DC5E /* NotificationController.swift in Sources */,
+				BA7A910B2137355100BDE154 /* MedicalRecordInitialViewController.swift in Sources */,
 				BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */,
 				BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */,
 				BAC38C5E2135DEB7007A2F91 /* ImmunizationViewController.swift in Sources */,
