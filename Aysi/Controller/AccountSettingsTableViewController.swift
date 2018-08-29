@@ -373,7 +373,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         customViewLeft.addSubview(backButton)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
+//        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
     }
     
     @objc func backButtonPressed(){
