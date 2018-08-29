@@ -12,6 +12,15 @@
 		89DD63742132D22B0038DC5E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD63732132D22B0038DC5E /* NotificationController.swift */; };
 		9708BDB3DA2AD867CE3FEBD5 /* Pods_Aysi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AC88A84DFA86BACE0E869D /* Pods_Aysi.framework */; };
 		BA4BEC3C212ACB0600509456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */; };
+		BA7A90F6213676EE00BDE154 /* HowTo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7A90F5213676EE00BDE154 /* HowTo.storyboard */; };
+		BA7A90FB2136776400BDE154 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A90F72136776300BDE154 /* ContentDetailViewController.swift */; };
+		BA7A90FC2136776400BDE154 /* ContentDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A90F82136776300BDE154 /* ContentDetailPageViewController.swift */; };
+		BA7A90FD2136776400BDE154 /* ContentDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A90F92136776300BDE154 /* ContentDetailImageViewController.swift */; };
+		BA7A90FE2136776400BDE154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A90FA2136776400BDE154 /* ViewController.swift */; };
+		BA7A91042136780400BDE154 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91022136780400BDE154 /* CollectionViewCell.swift */; };
+		BA7A91052136780400BDE154 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91032136780400BDE154 /* TableViewCell.swift */; };
+		BA7A91082136781C00BDE154 /* ContentImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91062136781B00BDE154 /* ContentImages.swift */; };
+		BA7A91092136781C00BDE154 /* HowToObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A91072136781C00BDE154 /* HowToObject.swift */; };
 		BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */; };
 		BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C8FAA21342161004F395D /* TipsViewController.swift */; };
 		BA9D3A6B2122CA5F000BE8A4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */; };
@@ -47,6 +56,15 @@
 		89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsTableViewController.swift; sourceTree = "<group>"; };
 		89DD63732132D22B0038DC5E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		BA4BEC3B212ACB0600509456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA7A90F5213676EE00BDE154 /* HowTo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HowTo.storyboard; sourceTree = "<group>"; };
+		BA7A90F72136776300BDE154 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		BA7A90F82136776300BDE154 /* ContentDetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDetailPageViewController.swift; sourceTree = "<group>"; };
+		BA7A90F92136776300BDE154 /* ContentDetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDetailImageViewController.swift; sourceTree = "<group>"; };
+		BA7A90FA2136776400BDE154 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA7A91022136780400BDE154 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		BA7A91032136780400BDE154 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BA7A91062136781B00BDE154 /* ContentImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentImages.swift; sourceTree = "<group>"; };
+		BA7A91072136781C00BDE154 /* HowToObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToObject.swift; sourceTree = "<group>"; };
 		BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
 		BA7C8FAA21342161004F395D /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -105,6 +123,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BA7A90FF2136777500BDE154 /* How To */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A91022136780400BDE154 /* CollectionViewCell.swift */,
+				BA7A91032136780400BDE154 /* TableViewCell.swift */,
+				BA7A90F92136776300BDE154 /* ContentDetailImageViewController.swift */,
+				BA7A90F82136776300BDE154 /* ContentDetailPageViewController.swift */,
+				BA7A90F72136776300BDE154 /* ContentDetailViewController.swift */,
+				BA7A90FA2136776400BDE154 /* ViewController.swift */,
+			);
+			path = "How To";
+			sourceTree = "<group>";
+		};
+		BA7A91002136778A00BDE154 /* Home Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */,
+				BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */,
+				BAC630B52134801400B81C69 /* HomeContentDetailViewController.swift */,
+			);
+			path = "Home Collection View";
+			sourceTree = "<group>";
+		};
+		BA7A9101213677B800BDE154 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */,
+				BA7C8FAA21342161004F395D /* TipsViewController.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
 		BAA4B0252122C5E4001BE550 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +190,8 @@
 		BAA4B0462122C66B001BE550 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA7A91062136781B00BDE154 /* ContentImages.swift */,
+				BA7A91072136781C00BDE154 /* HowToObject.swift */,
 				BAC38C5921358155007A2F91 /* HomeContent.swift */,
 			);
 			path = Model;
@@ -153,6 +205,7 @@
 				BAB59CA121328FAB001581F1 /* DataBayi.storyboard */,
 				BAA4B0352122C5E4001BE550 /* Main.storyboard */,
 				BA9D3A6A2122CA5F000BE8A4 /* Home.storyboard */,
+				BA7A90F5213676EE00BDE154 /* HowTo.storyboard */,
 				89DD636F2132AE5C0038DC5E /* AccountSettings.storyboard */,
 				BA9D3A6C2122CA6D000BE8A4 /* Chart.storyboard */,
 				BA9D3A6E2122CB0A000BE8A4 /* Immunization.storyboard */,
@@ -165,16 +218,14 @@
 		BAA4B0492122C67D001BE550 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA7A9101213677B800BDE154 /* Tips */,
+				BA7A91002136778A00BDE154 /* Home Collection View */,
+				BA7A90FF2136777500BDE154 /* How To */,
 				BAC38C572135361E007A2F91 /* GetStartedViewController.swift */,
 				BAB59CA621328FE8001581F1 /* InitialRegisterViewController.swift */,
 				BAB59CA421328FE8001581F1 /* DataBayiViewController.swift */,
 				BAB59CA521328FE8001581F1 /* HomeViewController.swift */,
 				89DD63712132B3530038DC5E /* AccountSettingsTableViewController.swift */,
-				BAC630B12134710100B81C69 /* BabyCollectionViewCell.swift */,
-				BAC630B32134710C00B81C69 /* WifeCollectionViewCell.swift */,
-				BAC630B52134801400B81C69 /* HomeContentDetailViewController.swift */,
-				BA7C8FA8213420EB004F395D /* TipsPageViewController.swift */,
-				BA7C8FAA21342161004F395D /* TipsViewController.swift */,
 				89DD63732132D22B0038DC5E /* NotificationController.swift */,
 				BAC38C5B2135DEAB007A2F91 /* ChartViewController.swift */,
 				BAC38C5D2135DEB7007A2F91 /* ImmunizationViewController.swift */,
@@ -256,6 +307,7 @@
 				BAA4B03C2122C5E6001BE550 /* Assets.xcassets in Resources */,
 				BAB59CA221328FAB001581F1 /* InitialRegister.storyboard in Resources */,
 				BA9D3A6D2122CA6D000BE8A4 /* Chart.storyboard in Resources */,
+				BA7A90F6213676EE00BDE154 /* HowTo.storyboard in Resources */,
 				BAA4B0372122C5E4001BE550 /* Main.storyboard in Resources */,
 				BA9D3A6F2122CB0A000BE8A4 /* Immunization.storyboard in Resources */,
 				BAB59CA321328FAB001581F1 /* DataBayi.storyboard in Resources */,
@@ -322,20 +374,28 @@
 				BAC38C602135DEC4007A2F91 /* MedicalRecordViewController.swift in Sources */,
 				BAC38C5A21358155007A2F91 /* HomeContent.swift in Sources */,
 				BAC38C582135361E007A2F91 /* GetStartedViewController.swift in Sources */,
+				BA7A90FB2136776400BDE154 /* ContentDetailViewController.swift in Sources */,
 				89DD63722132B3530038DC5E /* AccountSettingsTableViewController.swift in Sources */,
 				BAB59CA921328FE9001581F1 /* InitialRegisterViewController.swift in Sources */,
 				BAC630B22134710100B81C69 /* BabyCollectionViewCell.swift in Sources */,
 				BAC630B62134801400B81C69 /* HomeContentDetailViewController.swift in Sources */,
 				BAC630B42134710C00B81C69 /* WifeCollectionViewCell.swift in Sources */,
 				BAB59CA821328FE9001581F1 /* HomeViewController.swift in Sources */,
+				BA7A91042136780400BDE154 /* CollectionViewCell.swift in Sources */,
+				BA7A90FC2136776400BDE154 /* ContentDetailPageViewController.swift in Sources */,
 				BA7C8FA9213420EB004F395D /* TipsPageViewController.swift in Sources */,
 				89DD63742132D22B0038DC5E /* NotificationController.swift in Sources */,
 				BA7C8FAB21342161004F395D /* TipsViewController.swift in Sources */,
 				BAB59CA721328FE9001581F1 /* DataBayiViewController.swift in Sources */,
 				BAC38C5E2135DEB7007A2F91 /* ImmunizationViewController.swift in Sources */,
+				BA7A91092136781C00BDE154 /* HowToObject.swift in Sources */,
 				BAA4B0322122C5E4001BE550 /* AppDelegate.swift in Sources */,
+				BA7A90FD2136776400BDE154 /* ContentDetailImageViewController.swift in Sources */,
+				BA7A90FE2136776400BDE154 /* ViewController.swift in Sources */,
 				BAA4B03A2122C5E4001BE550 /* Aysi.xcdatamodeld in Sources */,
 				BAC38C5C2135DEAB007A2F91 /* ChartViewController.swift in Sources */,
+				BA7A91052136780400BDE154 /* TableViewCell.swift in Sources */,
+				BA7A91082136781C00BDE154 /* ContentImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

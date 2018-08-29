@@ -18,6 +18,14 @@
             </objects>
             <point key="canvasLocation" x="2617" y="126"/>
         </scene>
+        <!--HowTo-->
+        <scene sceneID="Fc1-GW-1IW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HowTo" id="4kr-lu-ZQx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSp-8B-OL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="728"/>
+        </scene>
         <!--Home Content Detail View Controller-->
         <scene sceneID="oe4-Bg-zio">
             <objects>
@@ -191,6 +199,9 @@
                                                 <rect key="frame" x="67" y="862" width="240" height="47"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="HOW TO"/>
+                                                <connections>
+                                                    <segue destination="4kr-lu-ZQx" kind="show" id="6Tc-X1-QIR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
