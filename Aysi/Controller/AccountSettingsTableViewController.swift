@@ -247,6 +247,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         masukAkunOutlet.layer.cornerRadius = 5
         masukAkunOutlet.layer.borderWidth = 1
         masukAkunOutlet.layer.borderColor = UIColor.init(displayP3Red: 61/255, green: 117/255, blue: 143/255, alpha: 1.0).cgColor
+        
     }
     
     //return to remove keyboard
@@ -367,6 +368,7 @@ class AccountSettingsTableViewController: UITableViewController, UITextFieldDele
         customViewLeft.addSubview(backButton)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customViewLeft)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
     }
     
     @objc func backButtonPressed(){

@@ -18,15 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-tN-kK2">
-                                <rect key="frame" x="166" y="396" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grafik" translatesAutoresizingMaskIntoConstraints="NO" id="hSX-ql-Qui">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hSX-ql-Qui" firstAttribute="trailing" secondItem="lwg-tn-goQ" secondAttribute="trailing" id="HCk-ec-DED"/>
+                            <constraint firstItem="hSX-ql-Qui" firstAttribute="top" secondItem="3PY-Vq-0Z3" secondAttribute="top" id="NJY-Bw-8m6"/>
+                            <constraint firstItem="hSX-ql-Qui" firstAttribute="bottom" secondItem="lwg-tn-goQ" secondAttribute="bottom" id="hdQ-hr-NyV"/>
+                            <constraint firstItem="hSX-ql-Qui" firstAttribute="leading" secondItem="lwg-tn-goQ" secondAttribute="leading" id="j9B-k2-D1Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lwg-tn-goQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="line-chart" selectedImage="line-chartShadow" id="PiC-Zf-fu3">
@@ -36,10 +38,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKe-OI-ck0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="184"/>
+            <point key="canvasLocation" x="124" y="183.99014778325125"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Grafik" width="750" height="1468"/>
         <image name="line-chart" width="30" height="30"/>
         <image name="line-chartShadow" width="36" height="36"/>
     </resources>
