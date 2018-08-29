@@ -11,6 +11,8 @@ import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource,UICollectionViewDelegate {
     
+    @IBOutlet weak var buttonIstriOutlet: UIButton!
+    
     var currentCategoryAnak = ""
     var currentCategoryIstri = ""
     var objToPass:HowToObject?
@@ -23,12 +25,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //
+        
         setupNavBarItems()
         contentAnak.addContent(category: "Pijat-Memijat", object: ContentImages(category: "Pijat-Memijat", title: "Pijat Dada", categoryImage: "PijatDada", contentImage: ["PijatDada1","PijatDada2","PijatDada3","PijatDada4"]))
         contentAnak.addContent(category: "Pijat-Memijat", object: ContentImages(category: "Pijat-Memijat", title: "Pijat Perut", categoryImage: "PijatPerut", contentImage: ["PijatPerut1","PijatPerut2","PijatPerut3","PijatPerut4","PijatPerut5","PijatPerut6","PijatPerut7"]))
         
+        buttonIstri(buttonIstriOutlet)
     }
     
     

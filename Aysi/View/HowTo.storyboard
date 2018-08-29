@@ -135,6 +135,7 @@
                         <outlet property="MyTable" destination="JyP-Ec-VAM" id="GYP-kt-fWl"/>
                         <outlet property="anakLabel" destination="LeD-wH-Ps7" id="RLC-Mk-7ML"/>
                         <outlet property="anakUnderline" destination="HEk-4s-hog" id="Z5N-6P-8sn"/>
+                        <outlet property="buttonIstriOutlet" destination="WaC-g4-RnQ" id="ku7-kr-B7S"/>
                         <outlet property="istriLabel" destination="Acp-q2-hz5" id="gyA-eT-gm9"/>
                         <outlet property="istriUnderline" destination="q5Z-cZ-0ss" id="WZV-OO-zYY"/>
                         <segue destination="Eib-ED-cJN" kind="show" identifier="ToContentDetail" id="s9y-yx-2KD"/>
